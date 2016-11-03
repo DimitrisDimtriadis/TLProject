@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Dimitriadis983\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.0_f9e72eed651432ac863240bba69e6e9c5f7647c6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_87713227f6d178e41fdfa78a9c751ffc2489e6c3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.0_099ecf77252aa37f4e2ed913702f42e113956403\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1317fdeaf4017f4ace3b430c9984f124afd61da8">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b4a586dffb7b5d62b342dc5257d887dcf33e5718\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.0_6773e10ba76734f2817c6369b6a1ed61f5f05966\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6a2dbfc56209a891b6e9a39857a10c9b63bbbaf7">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8f4de4b5a9f8306271d14e1899a1d6b259e03a8d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\Adventure_GO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.0_8803da5dfd121998907276f38ea3c5dec3e321b7\classes.dex" />
+    </item>
+
+</items>
