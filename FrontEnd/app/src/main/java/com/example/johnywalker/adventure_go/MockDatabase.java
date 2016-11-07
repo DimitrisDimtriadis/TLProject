@@ -6,7 +6,7 @@ package com.example.johnywalker.adventure_go;
 
 public class MockDatabase implements IDao
 {
-    private String eMail = "JohnyWalker94@hotmail.com", pass = "12345";
+    private String eMail = "admin", pass = "admin";
 
     @Override
     public boolean attemptDatabaseConnection()

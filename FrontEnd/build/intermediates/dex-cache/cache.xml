@@ -151,7 +151,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="3487691d9c71abf0bf4b9fc7654ffe4a93a69086">
+        sha1="84502f2cdabc842b80cc4ca539c06fd841b1a85c">
         <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_801a7af80d31b4a6c8679e3791aa0094fa37ee59\classes.dex" />
     </item>
     <item
@@ -502,7 +502,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="ae6bb3b680c613eeb4236369f8a3b1b30c1d3f7d">
+        sha1="71e6633cf77e42ac23fb4fcf1b929474abf4409a">
         <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b5dde530ffa300126983d67a2f26f4c2187f2a93\classes.dex" />
     </item>
     <item
