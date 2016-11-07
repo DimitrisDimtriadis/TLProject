@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Dimitriadis983\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.0_f9e72eed651432ac863240bba69e6e9c5f7647c6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.0_6e33de7f3755137c52b9ff288dbf6be478d2d3b7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_6faac6ed9153bee8adb6ffb8fcf4fb68018208c8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e502ef9553e259b363cdfa0a874f5e8fcfba1526">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_3993700cb384af1e1d9f74fbb2a1202cdca90512\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.0_01a5f7eee516e6f70b4a59b3bcf72a01b3a59e65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.0_066f4714f7f42249bb72c5e94796a533db7ac4de\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="35b10ed044c67dc3d3ddaf8fb82e0dd6506f1e5f">
+        <dex dex="E:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8ec454e05c5d60165d81421316c24ae7150fefd9\classes.dex" />
+    </item>
+
+</items>
