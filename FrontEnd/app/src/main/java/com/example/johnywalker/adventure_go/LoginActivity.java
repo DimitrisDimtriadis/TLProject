@@ -1,5 +1,6 @@
 package com.example.johnywalker.adventure_go;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -18,13 +19,13 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity
 {
-    private UserLoginTask mAuthTask = null;
+    private IDao mDatabaseConnection  = null;
 
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
+    protected void onCreate(final Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -38,7 +39,7 @@ public class LoginActivity extends AppCompatActivity
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent)
             {
-                if (id == R.id.login || id == EditorInfo.IME_NULL)
+                if (id == R.id.login)
                 {
                     attemptLogin();
                     return true;
@@ -48,13 +49,25 @@ public class LoginActivity extends AppCompatActivity
         });
 
         //Add button listener
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new View.OnClickListener()
+        Button mSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        mSignInButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
                 attemptLogin();
+            }
+        });
+
+        Button mRegisterButton = (Button) findViewById(R.id.email_register_button);
+        mRegisterButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent myIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                LoginActivity.this.startActivity(myIntent);
+                finish();
             }
         });
     }
@@ -64,49 +77,17 @@ public class LoginActivity extends AppCompatActivity
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
-        boolean cancel = false;
-        View focusView = null;
+        boolean userExists;
 
-        //Validate password
-        if(!TextUtils.isEmpty(password) && !isPasswordValid(password))
-        {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
-            focusView = mPasswordView;
-            cancel = true;
-        }
+        mDatabaseConnection = new MockDatabase();
 
-        //Validate email
-        if(TextUtils.isEmpty(email))
+        if(mDatabaseConnection.attemptDatabaseConnection())
         {
-            mEmailView.setError(getString(R.string.error_field_required));
-            focusView = mEmailView;
-            cancel = true;
+            userExists = mDatabaseConnection.verifyUser(email, password);
+            if(userExists)
+            {
+                //TODO
+            }
         }
-        else if(!isEmailValid(email))
-        {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
-        }
-
-        if(cancel)
-        {
-            focusView.requestFocus();
-        }
-        else
-        {
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute();
-        }
-    }
-
-    private boolean isEmailValid(String email)
-    {
-        return email.equals("JohnyWalker94@hotmail.com");
-    }
-
-    private boolean isPasswordValid(String password)
-    {
-        return password.equals("6947032331marios");
     }
 }

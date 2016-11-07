@@ -1,5 +1,6 @@
 package com.example.johnywalker.adventure_go;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -7,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -17,6 +19,7 @@ import android.widget.TextView;
 public class RegisterActivity extends AppCompatActivity {
 
     private LoginActivity login = null;
+    private IDao mDatabaseConnection  = null;
 
     private AutoCompleteTextView mEmailView;
     private AutoCompleteTextView mEmailVerificationView;
@@ -42,6 +45,18 @@ public class RegisterActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        Button mRegisterButton = (Button) findViewById(R.id.email_register_button);
+        mRegisterButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                RegisterActivity.this.startActivity(myIntent);
+                finish();
+            }
+        });
     }
 
     private void attemptRegister()
@@ -50,61 +65,16 @@ public class RegisterActivity extends AppCompatActivity {
         String emailVerify = mEmailVerificationView.getText().toString();
         String password = mPasswordView.getText().toString();
 
-        boolean cancel = false;
-        View focusView = null;
+        mDatabaseConnection = new MockDatabase();
 
-        //Validate password
-        if(!TextUtils.isEmpty(password) && !isPasswordValid(password))
+        if(mDatabaseConnection.attemptDatabaseConnection())
         {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
-            focusView = mPasswordView;
-            cancel = true;
-        }
-
-        //Validate email
-        if(TextUtils.isEmpty(email))
-        {
-            mEmailView.setError(getString(R.string.error_field_required));
-            focusView = mEmailView;
-            cancel = true;
-        }
-        else if(!isEmailValid(email))
-        {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
-        }
-
-        if(!TextUtils.isEmpty(emailVerify))
+            if(mDatabaseConnection.registerUser(email, emailVerify, password));
             {
-            mEmailView.setError(getString(R.string.error_field_required));
-            focusView = mEmailVerificationView;
-            cancel = true;
+                Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                RegisterActivity.this.startActivity(myIntent);
+                finish();
+            }
         }
-        else if(!emailVerify.equals(email))
-        {
-            mEmailView.setError(getString(R.string.error_invalid_email_verification));
-            focusView = mEmailVerificationView;
-            cancel = true;
-        }
-
-        if(cancel)
-        {
-            focusView.requestFocus();
-        }
-        else
-        {
-            login = new LoginActivity();
-        }
-    }
-
-    private boolean isPasswordValid(String p)
-    {
-        return true;
-    }
-
-    private boolean isEmailValid(String p)
-    {
-        return true;
     }
 }
