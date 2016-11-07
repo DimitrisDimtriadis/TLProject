@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity
             userExists = mDatabaseConnection.verifyUser(email, password);
             if(userExists)
             {
-                //TODO
+                startActivity(new Intent(LoginActivity.this, MapsActivity.class));
             }
         }
     }
