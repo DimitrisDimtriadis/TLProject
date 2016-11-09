@@ -8,5 +8,5 @@ public interface IDao
 {
     boolean attemptDatabaseConnection();
     boolean verifyUser(String email, String password);
-    boolean registerUser(String email, String emailVerification, String password);
+    boolean registerUser(String username, String email, String password);
 }

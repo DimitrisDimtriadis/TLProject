@@ -18,11 +18,10 @@ import android.widget.TextView;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private LoginActivity login = null;
     private IDao mDatabaseConnection  = null;
 
+    private AutoCompleteTextView mUsernameView;
     private AutoCompleteTextView mEmailView;
-    private AutoCompleteTextView mEmailVerificationView;
     private EditText mPasswordView;
 
     @Override
@@ -30,8 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        mUsernameView = (AutoCompleteTextView) findViewById(R.id.username);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-        mEmailVerificationView = (AutoCompleteTextView) findViewById(R.id.emailVerify);
         mPasswordView = (EditText) findViewById(R.id.password);
 
         //Add password listener
@@ -61,15 +60,15 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void attemptRegister()
     {
+        String username = mUsernameView.getText().toString();
         String email = mEmailView.getText().toString();
-        String emailVerify = mEmailVerificationView.getText().toString();
         String password = mPasswordView.getText().toString();
 
         mDatabaseConnection = new MockDatabase();
 
         if(mDatabaseConnection.attemptDatabaseConnection())
         {
-            if(mDatabaseConnection.registerUser(email, emailVerify, password));
+            if(mDatabaseConnection.registerUser(username, email, password));
             {
                 Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
                 RegisterActivity.this.startActivity(myIntent);
