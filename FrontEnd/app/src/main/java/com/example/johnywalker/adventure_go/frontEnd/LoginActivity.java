@@ -1,17 +1,19 @@
-package com.example.johnywalker.adventure_go;
+package com.example.johnywalker.adventure_go.frontEnd;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.johnywalker.adventure_go.controller.IDao;
+import com.example.johnywalker.adventure_go.controller.MockDatabase;
+import com.example.johnywalker.adventure_go.R;
 
 /**
  * Created by JohnyWalker94 on 01-Nov-16.

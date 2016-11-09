@@ -1,4 +1,4 @@
-package com.example.johnywalker.adventure_go;
+package com.example.johnywalker.adventure_go.controller;
 
 /**
  * Created by JohnyWalker on 11/06/2016.

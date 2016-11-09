@@ -1,4 +1,4 @@
-package com.example.johnywalker.adventure_go;
+package com.example.johnywalker.adventure_go.frontEnd;
 
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -6,6 +6,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.example.johnywalker.adventure_go.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
