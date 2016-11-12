@@ -21,10 +21,17 @@ import com.example.johnywalker.adventure_go.R;
 
 public class LoginActivity extends AppCompatActivity
 {
+    //Variables
+    //Database connection
     private IDao mDatabaseConnection  = null;
 
+    //Activity inputs
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
+
+    //User information
+    private String email;
+    private String password;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
@@ -76,20 +83,33 @@ public class LoginActivity extends AppCompatActivity
 
     private void attemptLogin()
     {
-        String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
+        //Get activity input values
+        email = mEmailView.getText().toString();
+        password = mPasswordView.getText().toString();
 
-        boolean userExists;
+        mDatabaseConnection = initializeDatabaseConnection();
 
-        mDatabaseConnection = new MockDatabase();
-
-        if(mDatabaseConnection.attemptDatabaseConnection())
+        if(attemptDatabaseConnection())
         {
-            userExists = mDatabaseConnection.verifyUser(email, password);
-            if(userExists)
+            if(userExists(email, password))
             {
                 startActivity(new Intent(LoginActivity.this, MapsActivity.class));
             }
         }
+    }
+
+    public IDao initializeDatabaseConnection()
+    {
+        return new MockDatabase();
+    }
+
+    public boolean attemptDatabaseConnection()
+    {
+        return mDatabaseConnection.attemptDatabaseConnection();
+    }
+
+    public boolean userExists(String mail, String pass)
+    {
+        return mDatabaseConnection.verifyUser(mail, pass);
     }
 }
