@@ -18,13 +18,21 @@ import com.example.johnywalker.adventure_go.R;
  * Created by JohnyWalker94 on 03-Nov-16.
  */
 
-public class RegisterActivity extends AppCompatActivity {
-
+public class RegisterActivity extends AppCompatActivity
+{
+    //Variables
+    //Database connection
     private IDao mDatabaseConnection  = null;
 
+    //Activity inputs
     private AutoCompleteTextView mUsernameView;
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
+
+    //User information
+    private String username;
+    private String email;
+    private String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,20 +70,41 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void attemptRegister()
     {
-        String username = mUsernameView.getText().toString();
-        String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
+        //Get activity input values
+        username = mUsernameView.getText().toString();
+        email = mEmailView.getText().toString();
+        password = mPasswordView.getText().toString();
 
-        mDatabaseConnection = new MockDatabase();
+        mDatabaseConnection = initializeDatabaseConnection();
 
-        if(mDatabaseConnection.attemptDatabaseConnection())
+        if(attemptDatabaseConnection())
         {
-            if(mDatabaseConnection.registerUser(username, email, password));
+            if(!userExists(email, password) && registerUser(username, email, password));
             {
                 Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
                 RegisterActivity.this.startActivity(myIntent);
                 finish();
             }
         }
+    }
+
+    public IDao initializeDatabaseConnection()
+    {
+        return new MockDatabase();
+    }
+
+    public boolean attemptDatabaseConnection()
+    {
+        return mDatabaseConnection.attemptDatabaseConnection();
+    }
+
+    public boolean userExists(String mail, String pass)
+    {
+        return mDatabaseConnection.verifyUser(mail, pass);
+    }
+
+    public boolean registerUser(String name, String mail, String pass)
+    {
+        return mDatabaseConnection.registerUser(name, mail, pass);
     }
 }
