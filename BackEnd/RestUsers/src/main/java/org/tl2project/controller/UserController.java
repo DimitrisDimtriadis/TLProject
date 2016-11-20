@@ -53,14 +53,5 @@ public class UserController {
   }
 
 
-  @RequestMapping("/test")
-  public ResponseEntity<String> test() {
-
-
-    return new ResponseEntity<String>("Test", HttpStatus.OK);
-
-
-  }
-
 
 }
