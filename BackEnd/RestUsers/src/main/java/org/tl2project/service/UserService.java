@@ -16,8 +16,8 @@ public class UserService {
   UserRepository repository;
 
   public boolean register(String username, String email, String password) {
-
-
+    
+    try{
 
     List<User> users = repository.findByUsernameOrEmail(username, email);
     if (users.isEmpty()) {
@@ -30,6 +30,10 @@ public class UserService {
     } else {
       return false;
     }
+    }
+    catch(Exception e){
+        return false;
+    }
 
 
   }
@@ -40,11 +44,12 @@ public class UserService {
 
     List<User> users = repository.findByUsernameAndPassword(username, password);
 
-    if (users == null) {
-
+    if (users.isEmpty()) {
+      
       return false;
     } else {
-
+      
+      
       return true;
     }
 
