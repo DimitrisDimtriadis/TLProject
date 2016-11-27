@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Adventure_GO</string>
+
+    <string name="prompt_username">Username</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+
+    <!-- Login -->
+    <string name="action_sign_in">Sign in</string>
+
+    <!-- Register -->
+
+    <string name="action_register">Register</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
