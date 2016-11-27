@@ -29,18 +29,18 @@ public class UserServiceTest {
 		assertEquals(true,userService.login(username ,password));
 	}
 	@Test
-	public void LoginTest2() {
+	public void LoginFailureTest() {
 		when(userService.login(username,password)).thenReturn(false);
 		assertEquals(false,userService.login(username ,password));
 	}
 	
 	@Test
-	public void LoginVerification() {
+	public void LoginVerificationAnyStringUsername() {
 		userService.login(null, password);
 		verify(userService).login(anyString(),eq(password));	
 	}
 	@Test
-	public void LoginVerification2() {
+	public void LoginVerificationAnyStringPassword() {
 		userService.login(username, null);
 		verify(userService).login(eq(username),anyString());		
 	}
@@ -50,22 +50,22 @@ public class UserServiceTest {
 		assertEquals(true,userService.register(username,email,password));
 	}
 	@Test
-	public void RegisterTest2(){
+	public void RegisterFailureTest(){
 		when(userService.register(username, email, password)).thenReturn(false);
 		assertEquals(false,userService.register(username,email,password));
 	}	
 	@Test
-	public void RegisterVerification() {
+	public void RegisterVerificationAnyStringEmail() {
 		userService.register(username, null,password);
 		verify(userService).register(eq(username),anyString(),eq(password));		
 	}
 	@Test
-	public void RegisterVerification2() {
+	public void RegisterVerificationAnyStringUsername() {
 		userService.register(null, email,password);
 		verify(userService).register(anyString(),eq(email),eq(password));		
 	}
 	@Test
-	public void RegisterVerification3() {
+	public void RegisterVerificationAnyStringPassword() {
 		userService.register(username,email,null);
 		verify(userService).register(eq(username),eq(email),anyString());		
 	}

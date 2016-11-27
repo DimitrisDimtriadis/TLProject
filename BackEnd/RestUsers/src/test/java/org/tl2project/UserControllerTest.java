@@ -36,33 +36,26 @@ public class UserControllerTest {
 			,userController.register(username, email, password) );
 	}
 	@Test
-	public void registerTest2() {
+	public void registerFailureTest() {
 		when(userController.register(username, email, password))
 			.thenReturn(new ResponseEntity<String>("Username or Email Already Exist",HttpStatus.IM_USED));
 		
 		assertEquals(new ResponseEntity<String>("Username or Email Already Exist",HttpStatus.IM_USED)
 			,userController.register(username, email, password) );
 	}
+	
 	@Test
-	public void registerTest3() {
-		when(userController.register(username, email, password))
-			.thenReturn(new ResponseEntity<String>("Username or Email Already Exist",HttpStatus.IM_USED));
-		
-		assertEquals(new ResponseEntity<String>("Username or Email Already Exist",HttpStatus.IM_USED)
-			,userController.register(username, email, password) );
-	}
-	@Test
-	public void RegisterVerification() {
+	public void RegisterVerificationAnyStringEmail() {
 		userController.register(username, null,password);
 		verify(userController).register(eq(username),anyString(),eq(password));		
 	}
 	@Test
-	public void RegisterVerification2() {
+	public void RegisterVerificationAnyStringUsername() {
 		userController.register(null, email,password);
 		verify(userController).register(anyString(),eq(email),eq(password));		
 	}
 	@Test
-	public void RegisterVerification3() {
+	public void RegisterVerificationAnyStringPassword() {
 		userController.register(username,email,null);
 		verify(userController).register(eq(username),eq(email),anyString());		
 	}
@@ -75,7 +68,7 @@ public class UserControllerTest {
 			,userController.login(username, password) );
 	}
 	@Test
-	public void loginTest2() {
+	public void loginFailureTest() {
 		when(userController.login(username, password))
 			.thenReturn(new ResponseEntity<String>("Username or password wrong",HttpStatus.NOT_FOUND));
 	
@@ -88,12 +81,12 @@ public class UserControllerTest {
 		verify(userController).login( username,password);		
 	}
 	@Test
-	public void loginVerification2() {
+	public void loginVerificationAnyStringPassword() {
 		userController.login(username,null);
 		verify(userController).login(eq(username),anyString());		
 	}
 	@Test
-	public void loginVerification3() {
+	public void loginVerificationAnyStringUsername() {
 		userController.login(null,password);
 		verify(userController).login(anyString(),eq(password));		
 	}
