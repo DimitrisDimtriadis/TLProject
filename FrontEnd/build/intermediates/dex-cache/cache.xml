@@ -2,616 +2,652 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a432629397351d3ec7f27a23d258b229b81af08f">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-9.4.0_a1559d0e6ff82e3d92cce0f7d946c177a71c877f.jar" />
+        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-9.8.0_cd8a8d94399e394334933d73ebc353dc02272bcb\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_1f5cb2f3a01dfee12eb3849401f602c21f1b9d7b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\JohnyWalker\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.0_ba18e7a2a8b951f264b4eee54e9d5f992b83d2dd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.4.0_24dbd4e81b0b23d17a85300c70ad7959d854740b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-9.4.0_1afef8e47b80fdd9cb358605bab47acdfa1e0988.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e6e2251f3d3abf4eecd6bf6919d41fc7af497852">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-9.4.0_8a3fb37bbf9a739c1888ea9d5b2635aaab314c19.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="03829a2618892d438a1f59c6286699ca1f476e93">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-framework-9.4.0_8ad5a455ac1d0ea6f3d2ab3b643a04a88a891650.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c8f5d56f8f8a287c95e02c542baade138a378048">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-common-9.4.0_c26ac7a8bb7fde642e7cda93c9f5d4559ba865c8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-23.0.0_1dc4bf1869e65e74635f69ae047ce81e7b1339ab.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-9.4.0_eb6c85d0e2b761ba3208c4e64ff0234a69d08ca7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.0_d317086c227e289ad8e3a262f0a38a347e4a13aa.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-9.4.0_e96d2a6187c6ba020991d1b4b434898f1ddd88c5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-9.4.0_fc8fcaa63831aa3e17c26cb2cbf501767aa9e85d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.0_c32248ef54e9ad7c901dae469c94aa5371f594d1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.0_94a377c22a30eef8248a6a518b200ab37884041d.jar" />
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_fa99b94f22d31f02cd3f0e24f4424351773093ca\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="670df81539ab71918d49b186598b7eff08ef6563">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-9.4.0_7d1695ea2063cfb219b9b83a96eec663a17677ea.jar" />
+        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.8.0_de81991d42e85cb6c3818fd3e69c8e86eaba7e03\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.4.0_ed4e08fafc09ba0183a75688796926be5c14623a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-9.4.0_15e7d5e07086a13e3377e7f63629c05a85207bc9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-contextmanager\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-contextmanager-9.4.0_fb20867cef2728a95b1f2e1c7d34fcfc7ae0cd30.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-9.4.0_501a00d016e193c5c35be97668b4174810dfd36b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.0.0_74947509747b5ff65e65fef04ea652830c94d0a6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.0_e51ea8e797e4e7273ae2d8a41362cf2318f95377.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-9.4.0_8d58865dd43ae9000592029850d0c31f436733f2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-common-9.4.0_35d13eaf0b8c253e03ee1590b1a5d6dbdee91f6d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-9.4.0_1bd31eae64cf33cd011b05046d02c457f5447889.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gass-9.4.0_feda17a4610fc4f453405dcba49227edb4ddd783.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7ea53c4458b80e8ea71f7fd6831fa184c501377b">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-api-9.4.0_8d0c488b561ed611b48137038b4c7e5968e6dbc7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5e8e535d15834e824817bdf5370556f62b4b2a5">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-9.4.0_ebd9e25a2da63c17bd7f687e1472ffa32c1ac9a3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.0.0_d94600a00b4228012030fc4bc1126e8626c8fca4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="98e97da89d4df8e2f6eba63498d3d46a587372f2">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-9.4.0_baa5bdf6d08a8281e57452f1d63108c7810f7083.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-9.4.0_6ec3b6798593332538cfe20f3e3f3e846197b522.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_60b208d0650e4ed3d5699e56926df6cc0cea13ba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-clearcut-9.4.0_1e0eed09f7223e7b602d80b4672c5ceb2daa0a6a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-iid-9.4.0_363c9ec709fe38384b1b965b3c5a667c40d42398.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_68b51ec174adfe8f13c5a1d8b193999a7016b276.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-config-9.4.0_e6746bb5d47eaad5b3e66e690e51bf5a5beaddef.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-9.4.0_4ab7a542e9d991be4829e60638ba0835a28d81ea.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="58c9f5ee817fdb8b658fd7455fadfb74119f7ee9">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-base-9.4.0_d9e81e508b8d867f9e41147ebc54ba368266a75b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-module-9.4.0_d70290b698ec7736a719c6393d59040c53bf5657.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-places-9.4.0_58de33450ad5f375c4411b2533ee56fbdc550d6a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-9.4.0_54f9d8e78337ddc00dd0ca13a687fa8085e31f05.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.0_1d38ba46109852cb23ecf9f07348954ee1baeac6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.0.0_b479d3ace157e5746a8af9a8cbd002f2633c22b3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-messaging-9.4.0_f2ead9f76b43c3ae9e505b006207af04207c3f09.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="736d8893fb702f128a153c9d87c9c29724d37872">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-9.4.0_86a409808aac686f0fd4bb67343d5085f0d67d32.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="461e4257888c25ec05abcd91e758fe7f4949230a">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-9.4.0_a43ee3f8bf2be7343ee4d93ff7908840068f86cc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0_5b6b25201971478231c0f0439c7a0fc451d306df.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-9.4.0_350763c1c74ad6b936b61bbb24f034756c7436fb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="954697ee6ea7bdd596babf4f70e8b7a17ca7649e">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-9.4.0_2fa84b2f66fa87209df4e274995102c2767cd9c0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_cb0a36ce3829b77e183a33588247c0d6ba4c255b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8197651ce1af4d89b47f4545cc720bc4f8611e7d">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-9.4.0_6c05d37ac9ceef9c4d98a0759ecc8069088e1194.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.0_3e86cc8d2c5a7868b9cabe963e346cd93b775120.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.0.0_dc4134341c01e7e21adf6af581953aa712bf35b4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-crash-9.4.0_4c0d0793b231cbad8959dc8d5cf885649824257b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.0_0bde5640ce175f2fc3cc23a8434bda95a90626ac.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.4.0_e1ab7868c2bec344d7028673a3d848f150b097bd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-9.4.0_56210e8f4b413c3fa2019566bb637a1451b7c81d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_900cd58e1956773ae740611fc6ceb086dc07ad6c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4348dd26d83b56c2058b768222c3271bce911724">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-9.4.0_ec0750b231cd4f2196a7d32b36a59583837675d0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3b7173b3df4c7029699919414400041f64519e34">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-9.4.0_e2801cd730b953419d28ccd3f35f7851a2b67b9e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-lite-9.4.0_4258e762d6b145f688c58ad894b2cd2550034f39.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.0_5debeeece3a1c3c7076e0f4e4424ace2b46fcd34.jar" />
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_de627133e7e3edfeba1e454b5d99a3b2b2ff9cc4\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0ad33eb600f3d80bdff5ce355c90d5533ade652a">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-impl-9.4.0_44fcd42dbe9ebe92be4c1c154cbf134303abf53e.jar" />
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.8.0_ce2676182cd10177d50bf0e59288e82f7c44a361\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-9.4.0_8c8a1d2d608679dd326d8db2d0c8696300518e40.jar" />
+        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.8.0_7f3eadfc1faced47691b7ba20bea6592651c0df4\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-9.4.0_d0ec5aabcf496dbc3b35d7304bc8b5c3ab7320dc.jar" />
+        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.8.0_a3b9271634878c35f5c5ae0778bb31f79e581a71\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-9.4.0_5a7b4753911bfaad64df025c34c0f19f0caf8ee1.jar" />
+        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.8.0_435cccdaab6df035d947a85024ed545c45bece49\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c10df7344e31161852c20bb8143fc37319aa10ec">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-9.4.0_fced4c8fbdffeb52e2f469971261665f9a4bc7c1.jar" />
+        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.8.0_91b6ce81391b393ffe5c73fcc6c0cb75ff31a3cf\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.4.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="ba47b210d36301e237ccfea860eaada04590f12a">
-        <dex dex="F:\TEI\Texnologia Logismikou (9o)\FrontEnd\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-9.4.0_0b3cc6c10fa00e6c5912b99be8e87db5304833f9.jar" />
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.8.0_60898af0e1025d93a0621bddd7a8aa90fd2f1bc4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.8.0_450bc6829f7e89b2100e5d18efec9b547ec781fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.8.0_203e099282d72f30e74bf1518f472e9be5c9e051\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.8.0_69f32d8f15e5815942bb79a8375c2168f6bfc189\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.8.0_af13ecfccd2a8989ad58b7c61fec4c846f9f8274\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.0_a8c2ad01e56f7e079581b1b53152aa3c5a54e359\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.8.0_c493256025b222ea90b1fc0747b4d55306ae3543\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ecccb7924d226e33e313ed5cd35b92a8863297e3">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_801a7af80d31b4a6c8679e3791aa0094fa37ee59\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.8.0_4d6b6395f1359fa2728fe26b750ec1e55e8378b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.8.0_62015d48b01ac4f888fe21bbdab462ac7882efdd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_8ed5a9344922e16eb6474899602a1ad16eb57c23\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.8.0_94bdbb85767014d75bc9db68cff70fb30f8fab5b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_fef16c2fb86a6d78d6b7e8a6baa417e684495544\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.8.0_658eaa3f761ecd20c9af52a7d55cc0ed722979ef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_cc4db1e7d7ee45fc1631097fd435910ae4bd982f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.0_535c8a12cf53cb3a116c7de260ae0f940db3b44a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.8.0_5494faa20e69d92d9f0e944a52f19b92ae4f2717\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.8.0_829ed62c21b44b0726f5a681e8da103a0cf4e117\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.0_42acb84e28d44994e56c09aa1d9fd29991e4e04f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_de1195fba1f23bd6217ce7e9ff449b4c2c4eca10\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.0_9868aed5e9f2890d822f954c6d55e05b88bbbb9d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.8.0_ba5678b5caddb115d72da61fd66b990d068a1bb8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.8.0_730da162fc547e1a5fd1d5c5c85996ec17cab9f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.8.0_2921b496cbd8c1f3bd7266379ebd7aaf308d41a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_30da0ab867ace567f82233bc21819cef4a37d4f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_5c5930c091255084f287b2475bf05b9d6c8bb187\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.8.0_f246b62c941f1ad730745307bdaac7ff7ceb4c26\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.8.0_70b9ce7deb54948c2600a2f4ce4f046b0bf8292b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.8.0_1bc8495582d3e278f28d7790d6556193c2e87077\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.8.0_ccb80651f78ab2fd220df7f68b6796b29dec02ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.8.0_e489de9318fee079e5809bf0da386e93369d1f21\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.8.0_854e5b16872f98b03fd872f2492cc1ca3079668a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.8.0_bcdf3e988f23af0874b39030a1856173c6426cae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.0_7e334d6cff6da51401252315efb7ac5f8f48f855\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.8.0_db51ed70c12031ef7270170886ee6f0ce4b58377\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="20a3c4e355150c15c13dd58045d43ad0c717d916">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.8.0_289bdc3e50532660321c29df50d8a3bece80ade4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_f80ef554279c39f00a5e22416ffa371ee91ad4ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.8.0_f6bdfd267f9b3ae27c250f805bbde6ec5ce68ad4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.8.0_ce0811c89b43b2d135dd9d25d143080a913b487f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.0_e0463aeccc7a2dce9922f4aaf0110ff295571f47\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_334626b74017aa1efdda36646aae004466f5edd1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-9.8.0_087ced91b95b48a520eec33d5e09ebd097f5c6ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9ff04cc3470178a44512624036751a803418c2ca">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.8.0_4ea4a959e7aa695d5e95923806dcc948c5522310\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.8.0_bab442718567320572b1901f2b0d18b70aa0a901\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.0_4e15af481866e3a1f8c463f39d7d6414594daa8d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.8.0_f81a68fe938ae4ca3bb042eaeb15e3d6e7b478e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_5c8de5260a6f131d98dc3fa268de02199b2e104a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8d90b48c056b0c37f89195b0900a2dbc0dfc4327">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b5dde530ffa300126983d67a2f26f4c2187f2a93\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.8.0_1c81e9a1e9d31d808cfddc74950371ea88dc0c18\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.8.0_723528f0191c7d56c61ba1ec60289625433bcaf8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e56f31b23ddb067f95f01255295167db7c798612">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.8.0_1e02272f33d71498501897ab8ecd191568ddcc87\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.8.0_5171a7d9256922fde4b5a980ab15897e8f889a28\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_381e51a8a53b2c404df447caa2a0ea9e94859e88\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.8.0_38f79916c28460230e50ea66c2c30625576960b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ddimitriadis\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_4f5f3caa1492b406e3b98a46dabdd72bd1d58a9d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.8.0_352e43a43d905d7516207c74c1739da71bd71054\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_29f4b354d146135348e1d10335e0cc611468563d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_80ef587288dee4a339ed0ff96f6da681f439145c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.8.0_9c9aced5a8aadfe8808a6c3a5502e52a83591f47\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.8.0_4ec3f45d94afcb097322bee7991ec9ed5aaf5c71\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.8.0_8e6764e88ff9a04214dd822856639d8abe35f60a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.8.0_92318351c6709057d49d008e96d27ad99655da9e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.8.0_ac42496ed2ae9d29412f630b100a6c795ebe8fb4\classes.dex" />
     </item>
 
 </items>
