@@ -40,7 +40,7 @@ public class LogInFailTest extends InstrumentationTestCase
         UiObject2 passwordSignIn = waitForObject(By.res("com.example.johnywalker.adventure_go:id/password"));
         passwordSignIn.setText("WrongPassword");
 
-        UiObject2 signInButton = device.findObject(By.text("Sign in"));
+        UiObject2 signInButton = device.findObject(By.res("com.example.johnywalker.adventure_go:id/email_sign_in_button"));
         signInButton.click();
 
         //TODO check if it shows a window notification
