@@ -33,9 +33,10 @@ public class RegisterTest extends InstrumentationTestCase
     @Test
     public void testRegister() throws Exception
     {
-        waitForObject(By.res("com.example.johnywalker.adventure_go:id/decor_content_parent"));
+        //isos den thelei ta comments giati den thimame ti kanei opote to evala ta comments
+        //waitForObject(By.res("com.example.johnywalker.adventure_go:id/decor_content_parent"));
 
-        UiObject2 registerInButton = device.findObject(By.text("Register"));
+        UiObject2 registerInButton = device.findObject(By.res("com.example.johnywalker.adventure_go:id/email_register_button"));
         registerInButton.click();
 
         //Username
