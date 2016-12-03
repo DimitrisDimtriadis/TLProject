@@ -23,7 +23,9 @@ public class User implements Serializable {
 
   @Column(name = "email")
   private String email;
-
+  
+  @Column(name = "score")
+  private Long score;
 
 
   public User() {}
@@ -67,5 +69,11 @@ public class User implements Serializable {
     this.email = email;
   }
 
+  public Long getScore() {
+    return score;
+  }
 
+  public void setScore(Long score) {
+    this.score = score;
+  }
 }

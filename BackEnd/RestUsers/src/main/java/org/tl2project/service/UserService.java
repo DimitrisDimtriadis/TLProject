@@ -17,6 +17,7 @@ public class UserService {
 
   public boolean register(String username, String email, String password) {
     
+    boolean response;
     try{
 
     List<User> users = repository.findByUsernameOrEmail(username, email);
@@ -24,35 +25,40 @@ public class UserService {
 
       User user = new User(username, email, password);
       repository.save(user);
-
-      return true;
+      response = true;
 
     } else {
-      return false;
+      response = false;
+     
     }
     }
     catch(Exception e){
-        return false;
+      response = false;
     }
-
-
+    
+    return response;
   }
 
   public boolean login(String username, String password) {
 
-
+    boolean response;
+    try{
 
     List<User> users = repository.findByUsernameAndPassword(username, password);
 
     if (users.isEmpty()) {
       
-      return false;
+      response = false;
     } else {
       
-      
-      return true;
+      response =  true;
     }
-
+    }
+    catch(Exception e){
+      response = false;
+    }
+    
+    return response;
   }
 
 }

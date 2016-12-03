@@ -10,7 +10,7 @@ import org.tl2project.service.UserService;
 
 
 
-@RequestMapping("/api")
+@RequestMapping("/user")
 @RestController
 public class UserController {
 
