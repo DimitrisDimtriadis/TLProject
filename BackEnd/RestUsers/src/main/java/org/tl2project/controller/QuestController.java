@@ -17,24 +17,24 @@ import org.tl2project.service.QuestService;
 
 
 
-@RequestMapping("/quest")
+@RequestMapping(path="/quest")
 @RestController
 public class QuestController {
   
   @Autowired
   QuestService questservice;
   
-  @RequestMapping(method=RequestMethod.GET, produces="application/json")    
-  public @ResponseBody List<Quest> getQuests(@RequestParam(value="latitude", required=true) BigDecimal lat,
-      @RequestParam(value="longtitude", required=true) BigDecimal lng,
-      @RequestParam(value="score", required=true) int score) {
-    
-      String difficulty = "EASY";
+  
+  @RequestMapping(path="/getQuests" ,method=RequestMethod.GET, produces="application/json")    
+  public @ResponseBody List<Quest> getQuests(
+      @RequestParam(value="latitude", required=true) BigDecimal lat,
+      @RequestParam(value="longitude", required=true) BigDecimal lng,
+      @RequestParam(value="score", required=true) Long score) {
       
-    
-    
-    return questservice.produceQuests(lat, lng, difficulty);
+      
+    return questservice.produceQuests(lat, lng, score);
           
   }
+
 
 }

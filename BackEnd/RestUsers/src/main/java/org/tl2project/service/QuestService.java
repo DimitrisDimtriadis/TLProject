@@ -19,13 +19,16 @@ public class QuestService {
   @Autowired
   RiddleRepository repository;
   
-  public List<Quest> produceQuests(BigDecimal lat, BigDecimal lng, String difficulty){
+  public List<Quest> produceQuests(BigDecimal lat, BigDecimal lng,Long score){
     
     List<List<BigDecimal>> points = new ArrayList<List<BigDecimal>>();
-    BigDecimal[ ][ ] p = new BigDecimal[4][2];
+    
     calculatePoints(lat, lng, points);
     
+    String difficulty = calculateDifficulty(score);
+    
     ArrayList<Quest> quests = new ArrayList<Quest>();
+    
     assignPointsToQuests(quests, difficulty, points);
     
     return quests;
@@ -34,7 +37,7 @@ public class QuestService {
   
   private void calculatePoints(BigDecimal lat, BigDecimal lng, List<List<BigDecimal>> points){
     
-    BigDecimal distance = new BigDecimal("0.001");
+    BigDecimal distance = new BigDecimal(0.001);
       
     //List<BigDecimal> point1 = new ArrayList<BigDecimal>();
     //point1.add(lat.subtract(distance));
@@ -53,22 +56,44 @@ public class QuestService {
   private void assignPointsToQuests( ArrayList<Quest> quests, String difficulty, List<List<BigDecimal>> points){
         
       int i=0, j=0;
-      
       List<Riddle> riddles = repository.findByDifficulty(difficulty);
       
       for(i=0;i< 4;i++){
+        
         Quest quest = new Quest();
         quest.setRiddle(riddles.get(i));
         for(j=0;j< 2;j++){
-        
-        quest.setLatitude(points.get(i).get(j));
-        quest.setLongitude(points.get(i).get(j));
-        
+          
+          if(j==0){
+            
+            quest.setLatitude(points.get(i).get(j));
+         }else{
+           
+            quest.setLongitude(points.get(i).get(j));     
+         }
         }
         quests.add(quest);
       }
-    
   }
-      
+  
+  private String calculateDifficulty(Long score){
+    String difficulty = new String();
+    
+    if(score<20){
+      difficulty = "EASY";
+    }
+    else if(score>=20 && score < 50 ){
+        difficulty = "MEDIUM";
+    }
+    else if(score>=50 && score < 100 ){
+      difficulty = "HARD";
+    }
+    else if(score>=50 && score < 100 ){
+      difficulty = "VERY HARD";
+    }
+    
+    
+    return difficulty;
+  }
 }
 

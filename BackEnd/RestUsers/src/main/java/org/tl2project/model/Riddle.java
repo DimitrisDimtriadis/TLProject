@@ -32,7 +32,7 @@ public class Riddle implements Serializable{
   private String category;
   
   @Column(name = "points")
-  private int points;
+  private Long points;
   
   @Column(name = "difficulty")
   private String difficulty;
@@ -88,11 +88,11 @@ public class Riddle implements Serializable{
     this.category = category;
   }
   
-  public int getPoints() {
+  public Long getPoints() {
     return points;
   }
 
-  public void setPoints(int points) {
+  public void setPoints(Long points) {
     this.points = points;
   }
   

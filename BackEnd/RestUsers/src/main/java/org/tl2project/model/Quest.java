@@ -3,19 +3,19 @@ package org.tl2project.model;
 import java.math.BigDecimal;
 
 public class Quest {
-    
-  private BigDecimal longitude; 
   
   private BigDecimal latitude;
   
+  private BigDecimal longitude; 
+   
   private Riddle riddle;
   
   public Quest(){}
 
-  public Quest(BigDecimal longitude, BigDecimal latitude, Riddle riddle) {
+  public Quest(BigDecimal latitude, BigDecimal longitude, Riddle riddle) {
     super();
-    this.longitude = longitude;
     this.latitude = latitude;
+    this.longitude = longitude;
     this.riddle = riddle;
   }
 
