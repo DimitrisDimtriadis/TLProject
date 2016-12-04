@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.johnywalker.adventure_go.R;
+import com.google.android.gms.fitness.data.Application;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -18,7 +19,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private static final int waitTime = 200;
+    private static final int waitTime = 2000;
     private long mBackPressed;
     private Toast mExitToast;
 
@@ -40,12 +41,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if(mBackPressed + waitTime > System.currentTimeMillis())
         {
             mExitToast.cancel();
+            finish();
             super.onBackPressed();
             return;
         }
         else
         {
-            mExitToast = Toast.makeText(getBaseContext(), "Tap again to exit", Toast.LENGTH_LONG);
+            mExitToast = Toast.makeText(getBaseContext(), "Tap again to exit", Toast.LENGTH_SHORT);
             mExitToast.show();
         }
 

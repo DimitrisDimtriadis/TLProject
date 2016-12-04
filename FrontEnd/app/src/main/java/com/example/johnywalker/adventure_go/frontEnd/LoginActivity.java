@@ -109,6 +109,8 @@ public class LoginActivity extends AppCompatActivity
 
             Intent myIntent = new Intent(LoginActivity.this, MapsActivity.class);
             LoginActivity.this.startActivity(myIntent);
+
+            finish();
         }
         else if(!userExists)
         {

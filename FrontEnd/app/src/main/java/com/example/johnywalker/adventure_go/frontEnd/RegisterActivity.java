@@ -86,6 +86,8 @@ public class RegisterActivity extends AppCompatActivity
             {
                 Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
                 RegisterActivity.this.startActivity(myIntent);
+
+                finish();
             }
         });
     }
@@ -108,6 +110,7 @@ public class RegisterActivity extends AppCompatActivity
 
             Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
             RegisterActivity.this.startActivity(myIntent);
+
             finish();
         }
         else if(userExists)
