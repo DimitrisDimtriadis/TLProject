@@ -8,13 +8,7 @@ public class MockDatabase implements IDao
 {
     private String name = "admin", eMail = "admin", pass = "admin";
 
-    @Override
-    public boolean attemptDatabaseConnection()
-    {
-        return true;
-    }
-
-    public boolean verifyUser(String email, String password)
+    public boolean userVerification(String email, String password)
     {
         if(password.equals(pass) && email.equals(eMail))
         {
@@ -23,7 +17,7 @@ public class MockDatabase implements IDao
         return false;
     }
 
-    public boolean registerUser(String username, String email, String password)
+    public boolean userRegistration(String username, String email, String password)
     {
         if(!email.equals(eMail))
         {

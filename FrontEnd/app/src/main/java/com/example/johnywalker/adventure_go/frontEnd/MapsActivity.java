@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.johnywalker.adventure_go.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -17,6 +18,10 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    private static final int waitTime = 200;
+    private long mBackPressed;
+    private Toast mExitToast;
+
     private GoogleMap mMap;
 
     @Override
@@ -27,6 +32,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        if(mBackPressed + waitTime > System.currentTimeMillis())
+        {
+            mExitToast.cancel();
+            super.onBackPressed();
+            return;
+        }
+        else
+        {
+            mExitToast = Toast.makeText(getBaseContext(), "Tap again to exit", Toast.LENGTH_LONG);
+            mExitToast.show();
+        }
+
+        mBackPressed = System.currentTimeMillis();
     }
 
 
@@ -54,7 +77,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(teiCM).title("Marker in teiCM"));
 
         LatLng militaryBase = new LatLng(41.089641, 23.560090);
-        mMap.addMarker(new MarkerOptions().position(militaryBase).title("Marke in military base"));
+        mMap.addMarker(new MarkerOptions().position(militaryBase).title("Marker in military base"));
 
         mMap.addPolyline(new PolylineOptions().add(
                 myHome,
