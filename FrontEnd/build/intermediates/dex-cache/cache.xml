@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="00d358528c5a8731a6e19bca910cbb3fd755ee31">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-9.8.0_cd8a8d94399e394334933d73ebc353dc02272bcb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -21,12 +12,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="ee5304fd374e0b4ebf6b42d4037fbfb2c5336511">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.8.0_de81991d42e85cb6c3818fd3e69c8e86eaba7e03\classes.dex" />
+        sha1="c8f5d56f8f8a287c95e02c542baade138a378048">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.4.0_d1ce15ea681a67ab4b92682230e24f695202fd84\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.4.0_4de130fd3109aa12066831543a6f285797d8b50d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.4.0_5edb13110f6ec19e7ea7f0b00471f6585e5b4b26\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.4.0_649a9e731798f4d7fa015d8d66e914188d231d45\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -39,93 +57,75 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.8.0_ce2676182cd10177d50bf0e59288e82f7c44a361\classes.dex" />
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.4.0_1c81f054672c8b521e6e8f12d36afccc94d86636\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="e9b2cfdfd59b03643f1e240668275378b96615a8">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.8.0_7f3eadfc1faced47691b7ba20bea6592651c0df4\classes.dex" />
+        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.4.0_2873d6e715ef4d5e1dd071bda905aa7d8f89b1f0\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a2537b11ae24b42172d34e2a613fc0b903c56158">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.8.0_a3b9271634878c35f5c5ae0778bb31f79e581a71\classes.dex" />
+        sha1="e5e8e535d15834e824817bdf5370556f62b4b2a5">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.4.0_4a23a7c63d47640ce22f0904649df725d6faf5bb\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.8.0_435cccdaab6df035d947a85024ed545c45bece49\classes.dex" />
+        sha1="954697ee6ea7bdd596babf4f70e8b7a17ca7649e">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.4.0_6c1177e0915a8bd6b89a814a0ce443bf06992b7d\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="055eed08c9cff50cac0db69c74c4d9ff7aef3d84">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.8.0_91b6ce81391b393ffe5c73fcc6c0cb75ff31a3cf\classes.dex" />
+        sha1="a432629397351d3ec7f27a23d258b229b81af08f">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.4.0_d01f234042d21e3c7425f409183242f2f7a1edae\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.8.0_60898af0e1025d93a0621bddd7a8aa90fd2f1bc4\classes.dex" />
+        sha1="736d8893fb702f128a153c9d87c9c29724d37872">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.4.0_c79e51e6481d50033895e2728de616e657ced6bd\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="74ac7cbcf0de4a88e59612dc3a9e3f9e71acb4ca">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.8.0_450bc6829f7e89b2100e5d18efec9b547ec781fe\classes.dex" />
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.4.0_78630a3396b72bd912da827446beb782e02b6188\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.8.0_203e099282d72f30e74bf1518f472e9be5c9e051\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ca851be26ff89f5b32cc222cee98139fb3fac830">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.8.0_69f32d8f15e5815942bb79a8375c2168f6bfc189\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.8.0_af13ecfccd2a8989ad58b7c61fec4c846f9f8274\classes.dex" />
+        sha1="03829a2618892d438a1f59c6286699ca1f476e93">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.4.0_ffb276a75dec9b3ed1f5fa233be57341eb425e9a\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,12 +138,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a7a04d6b7c01e569a285fa627cf64f5b05295906">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.8.0_c493256025b222ea90b1fc0747b4d55306ae3543\classes.dex" />
+        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.4.0_0972ba3f769c7d8613d650fa7751e81b626983e7\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -151,26 +151,62 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="ecccb7924d226e33e313ed5cd35b92a8863297e3">
+        sha1="93c6ddb879dd89957721dce1ff2b190a599225cf">
         <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_801a7af80d31b4a6c8679e3791aa0094fa37ee59\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="50e35ae101a679c4c8ef3dda075b1df9d5d947d9">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.8.0_4d6b6395f1359fa2728fe26b750ec1e55e8378b8\classes.dex" />
+        sha1="4348dd26d83b56c2058b768222c3271bce911724">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.4.0_4bcc2a108bf899259c91563812eaff3b027bc0a8\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.8.0_62015d48b01ac4f888fe21bbdab462ac7882efdd\classes.dex" />
+        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.4.0_bae0f8fc6dafe81c32956bbbbba4e06496865a37\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_855386908705e2b09bab9e0aa93e271440eb54cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.4.0_fabf74fde2a500946af7349c5bae2c104aa72ab5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8197651ce1af4d89b47f4545cc720bc4f8611e7d">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.4.0_f6c502eb2a298e8b79275b5e69ea42e74ff600db\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-contextmanager\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-contextmanager-9.4.0_0c20bc14fd1bde7083a8fd3d6979758c27adb4c5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -183,30 +219,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.8.0_94bdbb85767014d75bc9db68cff70fb30f8fab5b\classes.dex" />
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.4.0_f0e8a2be7549257146a35ccb05c172ef62898361\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_fef16c2fb86a6d78d6b7e8a6baa417e684495544\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.8.0_658eaa3f761ecd20c9af52a7d55cc0ed722979ef\classes.dex" />
+        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.4.0_950c628dc72fae97953d7a33ce659bbd97166889\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -228,24 +255,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.8.0_5494faa20e69d92d9f0e944a52f19b92ae4f2717\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="910c013c511f752c4bbe24c5f492f669f4a3ccc0">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.8.0_829ed62c21b44b0726f5a681e8da103a0cf4e117\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -264,6 +273,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7ea53c4458b80e8ea71f7fd6831fa184c501377b">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.4.0_5784a365c72f9b42aefcdc4fc078cfaa27d36349\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -273,30 +291,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="fbb3885c40e431cd2b0dc69c0cab2bf6d5da7b43">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.8.0_ba5678b5caddb115d72da61fd66b990d068a1bb8\classes.dex" />
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.4.0_2125fcc5f941dabce8275433c65f48f82d25682a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.8.0_730da162fc547e1a5fd1d5c5c85996ec17cab9f5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.8.0_2921b496cbd8c1f3bd7266379ebd7aaf308d41a4\classes.dex" />
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.4.0_4028963dd539b8dd36cba5e76ff3f38caf8ce7d3\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -318,66 +327,48 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="363a20f1d25336e827dd24020f2ecdc42d62638f">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.8.0_f246b62c941f1ad730745307bdaac7ff7ceb4c26\classes.dex" />
+        sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.4.0_6d610ee38f817192e9b82985cf12700a8c78a1cb\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0b53c4b90654b67ee3892a8e2e7b819c083ab7a6">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.8.0_70b9ce7deb54948c2600a2f4ce4f046b0bf8292b\classes.dex" />
+        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.4.0_97d60bddf83b868430ea96ba44d4f6e1619b49a0\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.8.0_1bc8495582d3e278f28d7790d6556193c2e87077\classes.dex" />
+        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.4.0_4510c7c960bdb93e9dcb81165c1c24360380f37e\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0b8e087da59c0b062c33f49a335e59f907086da2">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.8.0_ccb80651f78ab2fd220df7f68b6796b29dec02ed\classes.dex" />
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.4.0_6266b94c470c3e3d0db7dfa0710d4e2837535c45\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c81df6bd515398ebe45089b0b16c55752a131f6a">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.8.0_e489de9318fee079e5809bf0da386e93369d1f21\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="cef85cfc7df40e29fbea58844dd4c1e7d0b15542">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.8.0_854e5b16872f98b03fd872f2492cc1ca3079668a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f2d240dd085626f03f759c41d628a0c8b63e491f">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.8.0_bcdf3e988f23af0874b39030a1856173c6426cae\classes.dex" />
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-23.0.0_269473533ee359dc6c5a38e4b49add625ea21dd5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -390,48 +381,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="2d3035050a075484cbf2e33f1ce1f779bae4d451">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.8.0_db51ed70c12031ef7270170886ee6f0ce4b58377\classes.dex" />
+        sha1="461e4257888c25ec05abcd91e758fe7f4949230a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.4.0_0077df3262e941afd81f9ed95f972a9d28ab73be\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="20a3c4e355150c15c13dd58045d43ad0c717d916">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.8.0_289bdc3e50532660321c29df50d8a3bece80ade4\classes.dex" />
+        sha1="ba47b210d36301e237ccfea860eaada04590f12a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.4.0_0fe8a43d2a32bfbb86bb12c567ff4edf1c2c36ec\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_f80ef554279c39f00a5e22416ffa371ee91ad4ee\classes.dex" />
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.4.0_7aebc1da1a21bc97d548abfaf3e4b868d9a9d370\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a972970c8beddb69c198f61f3fc55f0606a7dfe3">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.8.0_f6bdfd267f9b3ae27c250f805bbde6ec5ce68ad4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="16afe57c1d7f8165d107c7806ce7b0c71de87159">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.8.0_ce0811c89b43b2d135dd9d25d143080a913b487f\classes.dex" />
+        sha1="0ad33eb600f3d80bdff5ce355c90d5533ade652a">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.4.0_7ca9e6a4fa51a57806f754cde75c03c9afd12399\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -453,30 +435,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="679251204de40ace98776a6f4e3a649c27e3d89f">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-9.8.0_087ced91b95b48a520eec33d5e09ebd097f5c6ed\classes.dex" />
+        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.4.0_e6df6f7b99411e182ebff0bcb02e34fcef38f227\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="9ff04cc3470178a44512624036751a803418c2ca">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.8.0_4ea4a959e7aa695d5e95923806dcc948c5522310\classes.dex" />
+        sha1="e6e2251f3d3abf4eecd6bf6919d41fc7af497852">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.4.0_cb290e54a47743f69447da28cb59e463461a3045\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.8.0_bab442718567320572b1901f2b0d18b70aa0a901\classes.dex" />
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.4.0_5b0bbccd39476a4ba3103d28c9bd3cf153cb8a0b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-9.4.0_255c12833374d27ec0e230a7be46a65f291a4964\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -489,12 +480,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="289cad663c288ce965463cb9ece8b35cc7de0fac">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.8.0_f81a68fe938ae4ca3bb042eaeb15e3d6e7b478e7\classes.dex" />
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.4.0_40d51f31894f742323d3063a784b4c90bd069903\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.4.0_a9f0955a1026ad3e49129c0b8eef2dddd4f55b94\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -511,62 +511,53 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="8d90b48c056b0c37f89195b0900a2dbc0dfc4327">
+        sha1="3c03da931f4a2b263996f8fa0fdc20ebfd93577d">
         <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b5dde530ffa300126983d67a2f26f4c2187f2a93\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="3daa7a9c9009fd386872a84c177a76979bdcafd6">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.8.0_1c81e9a1e9d31d808cfddc74950371ea88dc0c18\classes.dex" />
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.4.0_ae892f0eda250825c717dae0e1a479e7fb230d5a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a1ed98e01bd58976d80c062fd0ea2968a1ff68a1">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.8.0_723528f0191c7d56c61ba1ec60289625433bcaf8\classes.dex" />
+        sha1="98e97da89d4df8e2f6eba63498d3d46a587372f2">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.4.0_a7fc61c3a826757510d448174f6bbfd4cf528172\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="e56f31b23ddb067f95f01255295167db7c798612">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.8.0_1e02272f33d71498501897ab8ecd191568ddcc87\classes.dex" />
+        sha1="c10df7344e31161852c20bb8143fc37319aa10ec">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.4.0_8714df78c83418422639ffc149de7687d98b7978\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="266570862e5792ef3c51143a8b8593cf54fac68d">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.8.0_5171a7d9256922fde4b5a980ab15897e8f889a28\classes.dex" />
+        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.4.0_2b43043fe977af3f0fe6f103fab58554a1c8f872\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_381e51a8a53b2c404df447caa2a0ea9e94859e88\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.8.0_38f79916c28460230e50ea66c2c30625576960b8\classes.dex" />
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_fba94e966fc1bccd701b4ae9fcd11307255bb05c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -579,12 +570,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="b4671be3d1288bf4e5f527cd33e42909fbe4ecc6">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.8.0_352e43a43d905d7516207c74c1739da71bd71054\classes.dex" />
+        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.4.0_b1cea9e20aeec1bcf1606fccf3181a153112d6dd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.4.0_31a5565853f8a0412a620020c913d0bd91170e97\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.4.0_7d46d2d4d5d88eba3f88bf1506589bdc8a0c97a2\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -597,57 +606,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_80ef587288dee4a339ed0ff96f6da681f439145c\classes.dex" />
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.4.0_ec3adf9043c10dc5b65558e12f1ed4e3f08b613a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.8.0_9c9aced5a8aadfe8808a6c3a5502e52a83591f47\classes.dex" />
+        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.4.0_22fa16da3ad971d7c680e6b0e8bf2e13d66a079b\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="190a642ba16d1421296a4d794606279b80039c59">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.8.0_4ec3f45d94afcb097322bee7991ec9ed5aaf5c71\classes.dex" />
+        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.4.0_5ab459ca110e2d6a34cb6715b46827283ade00d9\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.8.0\jars\classes.jar"
+        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.8.0_8e6764e88ff9a04214dd822856639d8abe35f60a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.8.0_92318351c6709057d49d008e96d27ad99655da9e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a30aea7df545072ad3c06f56b2efc13e67222140">
-        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.8.0_ac42496ed2ae9d29412f630b100a6c795ebe8fb4\classes.dex" />
+        sha1="58c9f5ee817fdb8b658fd7455fadfb74119f7ee9">
+        <dex dex="C:\CodingProjects\Adventurer-Go\FrontEnd\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.4.0_73d2ddaaa0e4a486fe94e157f2537c6365734d3a\classes.dex" />
     </item>
 
 </items>

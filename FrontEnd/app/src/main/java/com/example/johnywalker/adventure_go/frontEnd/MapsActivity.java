@@ -7,10 +7,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Toast;
 import com.example.johnywalker.adventure_go.R;
 import com.google.android.gms.maps.CameraUpdate;
@@ -23,7 +21,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private SupportMapFragment mapFrag;
@@ -42,7 +40,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapFrag.getMapAsync(this);
     }
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -60,8 +57,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //        mMap.addMarker(new MarkerOptions().position(myHome).title("Marker in my home"));
 //
 
+              LatLng coordinate = new LatLng(41.088405, 23.545148); //Store these lat lng values somewhere. These should be constant.
+               CameraUpdate location = CameraUpdateFactory.newLatLngZoom(
+                               coordinate, 15);
+               mMap.animateCamera(location);
 //        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myHome, 14));
 //        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13));
+
+
 
 //        LatLng teiCM = new LatLng(41.075812, 23.553689);
 //        mMap.addMarker(new MarkerOptions().position(teiCM).title("Marker in teiCM"));
@@ -106,6 +109,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             return true;
         }
     }
+//    public void onLocationChanged(Location location) {
+//        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+//        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 10);
+//        mMap.animateCamera(cameraUpdate);
+//        locationManager.removeUpdates(this);
+//    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
@@ -129,5 +138,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         }
     }
+
 
 }

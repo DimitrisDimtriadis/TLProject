@@ -11,21 +11,7 @@ android:orientation="vertical" >
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <Button
-            android:id="@+id/Bzoomin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onZoom"
-            android:text="^" />
 
-        <Button
-            android:id="@+id/Bzoomout"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:onClick="onZoom"
-            android:text="v" />'
 
         <Button
             android:layout_marginLeft="2dp"
