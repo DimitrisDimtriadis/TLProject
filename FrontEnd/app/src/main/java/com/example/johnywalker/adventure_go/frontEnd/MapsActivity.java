@@ -10,6 +10,7 @@ import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Toast;
 import com.example.johnywalker.adventure_go.R;
 import com.google.android.gms.maps.CameraUpdate;
@@ -17,6 +18,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -25,8 +27,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private GoogleMap mMap;
     private SupportMapFragment mapFrag;
-    private double currentLatitude;
-    private double currentLongitude;
 
 
     @Override
@@ -56,7 +56,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
 
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-
 //        LatLng myHome = new LatLng(41.088405, 23.545148);
 //        mMap.addMarker(new MarkerOptions().position(myHome).title("Marker in my home"));
 //
@@ -64,12 +63,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myHome, 14));
 //        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13));
 
-        LatLng coordinate = new LatLng(41.088405, 23.545148); //Store these lat lng values somewhere. These should be constant.
-        CameraUpdate location = CameraUpdateFactory.newLatLngZoom(
-                coordinate, 15);
-        mMap.animateCamera(location);
-
-//
 //        LatLng teiCM = new LatLng(41.075812, 23.553689);
 //        mMap.addMarker(new MarkerOptions().position(teiCM).title("Marker in teiCM"));
 //
@@ -84,8 +77,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //                ).color(Color.RED).width(10)
 //        );
     }
-
-
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
     public boolean checkLocationPermission() {
@@ -117,8 +108,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 if (grantResults.length > 0
