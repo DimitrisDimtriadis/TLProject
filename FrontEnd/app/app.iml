@@ -191,6 +191,7 @@
     <orderEntry type="library" exported="" name="firebase-iid-9.4.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-vision-9.4.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-wallet-9.4.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="httpclient-4.1.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-tagmanager-api-9.4.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="firebase-messaging-9.4.0" level="project" />
