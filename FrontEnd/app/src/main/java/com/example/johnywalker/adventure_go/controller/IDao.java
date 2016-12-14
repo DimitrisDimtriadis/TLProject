@@ -6,7 +6,6 @@ package com.example.johnywalker.adventure_go.controller;
 
 public interface IDao
 {
-    boolean attemptDatabaseConnection();
-    boolean verifyUser(String email, String password);
+    boolean verifyUser(String username, String password);
     boolean registerUser(String username, String email, String password);
 }
