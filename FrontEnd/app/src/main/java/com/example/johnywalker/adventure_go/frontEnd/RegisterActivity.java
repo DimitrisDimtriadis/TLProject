@@ -13,8 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.johnywalker.adventure_go.controller.IDao;
-import com.example.johnywalker.adventure_go.controller.MockDatabase;
+import com.example.johnywalker.adventure_go.controller.Controller;
+import com.example.johnywalker.adventure_go.mockController.IDao;
+import com.example.johnywalker.adventure_go.mockController.MockDatabase;
 import com.example.johnywalker.adventure_go.R;
 
 /**
@@ -97,6 +98,12 @@ public class RegisterActivity extends AppCompatActivity
         email = mEmailView.getText().toString();
         password = mPasswordView.getText().toString();
 
+        if(username.isEmpty() || email.isEmpty() || password.isEmpty())
+        {
+            Toast.makeText(this, "Empty field.", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         mDatabaseConnection = initializeDatabaseConnection();
 
         userExists = userExists(username, password);
@@ -120,16 +127,16 @@ public class RegisterActivity extends AppCompatActivity
 
     public IDao initializeDatabaseConnection()
     {
-        return new MockDatabase();
+        return new Controller();
     }
 
     public boolean userExists(String username, String pass)
     {
-        return mDatabaseConnection.verifyUser(username, pass);
+        return mDatabaseConnection.attemptUserVerification(username, pass);
     }
 
     public boolean registerUser(String name, String mail, String pass)
     {
-        return mDatabaseConnection.registerUser(name, mail, pass);
+        return mDatabaseConnection.attemptUserRegistration(name, mail, pass);
     }
 }
