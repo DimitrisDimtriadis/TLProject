@@ -1,6 +1,8 @@
 package com.example.johnywalker.adventure_go.frontEnd;
 
 import android.content.Intent;
+import android.os.Build;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -10,6 +12,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.johnywalker.adventure_go.controller.IDao;
 import com.example.johnywalker.adventure_go.controller.MockDatabase;
@@ -23,15 +26,17 @@ public class LoginActivity extends AppCompatActivity
 {
     //Variables
     //Database connection
-    private IDao mDatabaseConnection  = null;
+    private IDao mController = null;
 
     //Activity inputs
-    private AutoCompleteTextView mEmailView;
+    private AutoCompleteTextView mUsernameView;
     private EditText mPasswordView;
 
     //User information
-    private String email;
+    private String username;
     private String password;
+
+    private boolean userExists = false;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
@@ -39,7 +44,13 @@ public class LoginActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        if(Build.VERSION.SDK_INT > 9)
+        {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
+        mUsernameView = (AutoCompleteTextView) findViewById(R.id.username);
         mPasswordView = (EditText) findViewById(R.id.password);
 
         //Add password listener
@@ -68,14 +79,13 @@ public class LoginActivity extends AppCompatActivity
             }
         });
 
-        Button mRegisterButton = (Button) findViewById(R.id.email_register_button);
+        Button mRegisterButton = (Button) findViewById(R.id.register_button);
         mRegisterButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Intent myIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-                LoginActivity.this.startActivity(myIntent);
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
                 finish();
             }
         });
@@ -84,32 +94,36 @@ public class LoginActivity extends AppCompatActivity
     private void attemptLogin()
     {
         //Get activity input values
-        email = mEmailView.getText().toString();
+        username = mUsernameView.getText().toString();
         password = mPasswordView.getText().toString();
 
-        mDatabaseConnection = initializeDatabaseConnection();
+        mController = initializeController();
 
-        if(attemptDatabaseConnection())
+        userExists = userExists(username, password);
+
+        if(userExists)
         {
-            if(userExists(email, password))
-            {
-                startActivity(new Intent(LoginActivity.this, MapsActivity.class));
-            }
+            Toast.makeText(this, "Login successful", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(LoginActivity.this, MapsActivity.class));
+            finish();
+        }
+        else if(!userExists)
+        {
+            Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
         }
     }
 
-    public IDao initializeDatabaseConnection()
+    public IDao initializeController()
     {
         return new MockDatabase();
     }
 
-    public boolean attemptDatabaseConnection()
+    public boolean userExists(String username, String pass)
     {
-        return mDatabaseConnection.attemptDatabaseConnection();
-    }
-
-    public boolean userExists(String mail, String pass)
-    {
-        return mDatabaseConnection.verifyUser(mail, pass);
+        return mController.verifyUser(username, pass);
     }
 }

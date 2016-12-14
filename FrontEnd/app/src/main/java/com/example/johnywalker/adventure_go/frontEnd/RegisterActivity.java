@@ -1,7 +1,9 @@
 package com.example.johnywalker.adventure_go.frontEnd;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.johnywalker.adventure_go.controller.IDao;
 import com.example.johnywalker.adventure_go.controller.MockDatabase;
@@ -34,10 +37,19 @@ public class RegisterActivity extends AppCompatActivity
     private String email;
     private String password;
 
+    private boolean userExists = false;
+    private boolean userRegistered = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        if(Build.VERSION.SDK_INT > 9)
+        {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
         mUsernameView = (AutoCompleteTextView) findViewById(R.id.username);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -55,14 +67,24 @@ public class RegisterActivity extends AppCompatActivity
             }
         });
 
-        Button mRegisterButton = (Button) findViewById(R.id.email_register_button);
+        Button mRegisterButton = (Button) findViewById(R.id.register_button);
+        Button mLoginButton = (Button) findViewById(R.id.login_button);
+
         mRegisterButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
-                RegisterActivity.this.startActivity(myIntent);
+                attemptRegister();
+            }
+        });
+
+        mLoginButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                 finish();
             }
         });
@@ -77,14 +99,22 @@ public class RegisterActivity extends AppCompatActivity
 
         mDatabaseConnection = initializeDatabaseConnection();
 
-        if(attemptDatabaseConnection())
+        userExists = userExists(username, password);
+        userRegistered = registerUser(username, email, password);
+
+        if (!userExists && userRegistered)
         {
-            if(!userExists(email, password) && registerUser(username, email, password));
-            {
-                Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
-                RegisterActivity.this.startActivity(myIntent);
-                finish();
-            }
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            finish();
+        } else if (userExists)
+        {
+            Toast.makeText(this, "User already exists", Toast.LENGTH_LONG).show();
+        } else if (!userRegistered)
+        {
+            Toast.makeText(this, "Unable to register", Toast.LENGTH_LONG).show();
+        } else
+        {
+            Toast.makeText(this, "Error. Try again later", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -93,14 +123,9 @@ public class RegisterActivity extends AppCompatActivity
         return new MockDatabase();
     }
 
-    public boolean attemptDatabaseConnection()
+    public boolean userExists(String username, String pass)
     {
-        return mDatabaseConnection.attemptDatabaseConnection();
-    }
-
-    public boolean userExists(String mail, String pass)
-    {
-        return mDatabaseConnection.verifyUser(mail, pass);
+        return mDatabaseConnection.verifyUser(username, pass);
     }
 
     public boolean registerUser(String name, String mail, String pass)

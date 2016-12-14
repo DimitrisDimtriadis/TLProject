@@ -6,17 +6,11 @@ package com.example.johnywalker.adventure_go.controller;
 
 public class MockDatabase implements IDao
 {
-    private String name = "admin", eMail = "admin", pass = "admin";
+    private String name = "admin", mail = "admin", pass = "admin";
 
-    @Override
-    public boolean attemptDatabaseConnection()
+    public boolean verifyUser(String username, String password)
     {
-        return true;
-    }
-
-    public boolean verifyUser(String email, String password)
-    {
-        if(password.equals(pass) && email.equals(eMail))
+        if(password.equals(pass) && username.equals(name))
         {
             return true;
         }
@@ -25,20 +19,15 @@ public class MockDatabase implements IDao
 
     public boolean registerUser(String username, String email, String password)
     {
-        if(!email.equals(eMail))
+        if(email.equals(mail))
         {
+            System.out.println("Error: email");
             return false;
-            //Email error
         }
-        else if(!pass.equals(password))
+        else if(username.equals(name))
         {
+            System.out.println("Error: username");
             return false;
-            //Password error
-        }
-        else if(!username.equals(name))
-        {
-            return false;
-            //Username error
         }
         else
         {
