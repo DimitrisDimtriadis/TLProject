@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.johnywalker.adventure_go.controller.Controller;
 import com.example.johnywalker.adventure_go.mockController.IDao;
 import com.example.johnywalker.adventure_go.mockController.MockDatabase;
 import com.example.johnywalker.adventure_go.R;
@@ -38,9 +39,10 @@ public class LoginActivity extends AppCompatActivity
     private String password;
 
     private ValidateString validate;
+    private String errorMessage;
 
     private boolean userExists = false;
-    private String errorMessage;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
@@ -101,11 +103,6 @@ public class LoginActivity extends AppCompatActivity
         username = mUsernameView.getText().toString();
         password = mPasswordView.getText().toString();
 
-        if(username.isEmpty() || password.isEmpty())
-        {
-            Toast.makeText(this, "Empty field.", Toast.LENGTH_LONG).show();
-            return;
-        }
         mController = initializeController();
         validate = new ValidateString();
 
@@ -140,7 +137,7 @@ public class LoginActivity extends AppCompatActivity
 
     public IDao initializeController()
     {
-        return new MockDatabase();
+        return new Controller();
     }
 
     public boolean userExists(String username, String pass)

@@ -40,10 +40,12 @@ public class UserVerification
             }
             else if(userResponse.getStatusCode() == HttpStatus.NOT_FOUND)
             {
+                System.out.println("NOT_FOUND");
                 return false;
             }
             else
             {
+                System.out.println("ERROR");
                 return false;
             }
         }

@@ -14,9 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.johnywalker.adventure_go.controller.Controller;
+import com.example.johnywalker.adventure_go.miscellaneous.ValidateString;
 import com.example.johnywalker.adventure_go.mockController.IDao;
-import com.example.johnywalker.adventure_go.mockController.MockDatabase;
 import com.example.johnywalker.adventure_go.R;
+import com.example.johnywalker.adventure_go.mockController.MockDatabase;
 
 /**
  * Created by JohnyWalker94 on 03-Nov-16.
@@ -26,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity
 {
     //Variables
     //Database connection
-    private IDao mDatabaseConnection  = null;
+    private IDao mController = null;
 
     //Activity inputs
     private AutoCompleteTextView mUsernameView;
@@ -37,6 +38,9 @@ public class RegisterActivity extends AppCompatActivity
     private String username;
     private String email;
     private String password;
+
+    private ValidateString validate;
+    private String errorMessage;
 
     private boolean userExists = false;
     private boolean userRegistered = false;
@@ -98,19 +102,31 @@ public class RegisterActivity extends AppCompatActivity
         email = mEmailView.getText().toString();
         password = mPasswordView.getText().toString();
 
-        if(username.isEmpty() || email.isEmpty() || password.isEmpty())
+        mController = initializeController();
+        validate = new ValidateString();
+
+        if(!validateString(username))
         {
-            Toast.makeText(this, "Empty field.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Error! Username " + errorMessage, Toast.LENGTH_SHORT).show();
             return;
         }
-
-        mDatabaseConnection = initializeDatabaseConnection();
+        else if(!validateString(email))
+        {
+            Toast.makeText(this, "Error! Email " + errorMessage, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else if(!validateString(password))
+        {
+            Toast.makeText(this, "Error! Password " + errorMessage, Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         userExists = userExists(username, password);
         userRegistered = registerUser(username, email, password);
 
         if (!userExists && userRegistered)
         {
+            Toast.makeText(this, "Register successful", Toast.LENGTH_LONG).show();
             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             finish();
         } else if (userExists)
@@ -125,18 +141,35 @@ public class RegisterActivity extends AppCompatActivity
         }
     }
 
-    public IDao initializeDatabaseConnection()
+    public IDao initializeController()
     {
         return new Controller();
     }
 
     public boolean userExists(String username, String pass)
     {
-        return mDatabaseConnection.attemptUserVerification(username, pass);
+        return mController.attemptUserVerification(username, pass);
     }
 
     public boolean registerUser(String name, String mail, String pass)
     {
-        return mDatabaseConnection.attemptUserRegistration(name, mail, pass);
+        return mController.attemptUserRegistration(name, mail, pass);
+    }
+
+    public boolean validateString(String string)
+    {
+        int result;
+
+        result = validate.validateString(string);
+        errorMessage = validate.getErrorMessage(result);
+
+        if(result == 100)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
