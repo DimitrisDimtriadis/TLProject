@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.johnywalker.adventure_go.controller.IDao;
 import com.example.johnywalker.adventure_go.controller.MockDatabase;
 import com.example.johnywalker.adventure_go.R;
+import com.example.johnywalker.adventure_go.miscellaneous.ValidateString;
 
 /**
  * Created by JohnyWalker94 on 01-Nov-16.
@@ -36,7 +37,10 @@ public class LoginActivity extends AppCompatActivity
     private String username;
     private String password;
 
+    private ValidateString validate;
+
     private boolean userExists = false;
+    private String errorMessage;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
@@ -98,6 +102,18 @@ public class LoginActivity extends AppCompatActivity
         password = mPasswordView.getText().toString();
 
         mController = initializeController();
+        validate = new ValidateString();
+
+        if(!validateString(username))
+        {
+            Toast.makeText(this, "Error! Username " + errorMessage, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else if(!validateString(password))
+        {
+            Toast.makeText(this, "Error! Password " + errorMessage, Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         userExists = userExists(username, password);
 
@@ -125,5 +141,22 @@ public class LoginActivity extends AppCompatActivity
     public boolean userExists(String username, String pass)
     {
         return mController.verifyUser(username, pass);
+    }
+
+    public boolean validateString(String string)
+    {
+        int result;
+
+        result = validate.validateString(string);
+        errorMessage = validate.getErrorMessage(result);
+
+        if(result == 100)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
