@@ -30,8 +30,9 @@ public class MockCreationTest {
 	}
 	@Test
 	public void StubTest(){
-		when(userService.login(username,password)).thenReturn(true);
-		assertEquals(true,userService.login(username ,password));
+		when(userService.checkLogin(username, password)).
+		thenReturn(true);
+		assertEquals(true, userService.checkLogin(username ,password));
 	}
 	
 

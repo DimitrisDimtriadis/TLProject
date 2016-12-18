@@ -16,7 +16,7 @@ import com.jayway.restassured.RestAssured;
 
 
 
-public class UserControllerITest {   
+public class UserControllerIT {   
   
   @Before
   public void setup (){
@@ -36,7 +36,7 @@ public class UserControllerITest {
       param("username", "admin").
       param("password", "admin").
       when().
-      post("api/login").
+      get("user/login").
       then().
         statusCode(200);
   }
@@ -50,7 +50,7 @@ public class UserControllerITest {
       param("username", "blah").
       param("password", "blah").
       when().
-      post("api/login").
+      get("user/login").
       then().
         statusCode(404);
   }
@@ -65,7 +65,7 @@ public class UserControllerITest {
       param("email", "test1").
       param("password", "test1").
       when().
-      post("api/register").
+      post("user/register").
       then().
         statusCode(201);
   }
@@ -80,7 +80,7 @@ public class UserControllerITest {
       param("email", "test2").
       param("password", "test2").
       when().
-      post("api/register").
+      post("user/register").
       then().
         statusCode(226);
   }
@@ -95,9 +95,65 @@ public class UserControllerITest {
       param("email", "test1").
       param("password", "test2").
       when().
-      post("api/register").
+      post("user/register").
       then().
         statusCode(226);
+  }
+  
+  @Test
+  public void nullParametersRegister() {
+     
+      
+      RestAssured.
+      given().
+      param("username", "").
+      param("email", "").
+      param("password", "").
+      when().
+      post("user/register").
+      then().
+        statusCode(226);
+  }
+  
+  @Test
+  public void nullParametersLogin() {
+     
+      
+      RestAssured.
+      given().
+      param("username", "").
+      param("password", "").
+      when().
+      get("user/login").
+      then().
+        statusCode(404);
+  }
+  
+  @Test
+  public void settingScoreExcistingUser() {
+     
+      
+      RestAssured.
+      given().
+      param("username", "test1").
+      param("points", 5).
+      when().
+      get("user/score").
+      then().
+        statusCode(200);
+  }
+  @Test
+  public void settingScoreNonExcistingUser() {
+     
+      
+      RestAssured.
+      given().
+      param("username", "test2").
+      param("points", 5).
+      when().
+      get("user/score").
+      then().
+        statusCode(404);
   }
   
 }

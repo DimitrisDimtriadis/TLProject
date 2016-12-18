@@ -25,24 +25,29 @@ public class UserServiceTest {
 	
 	@Test
 	public void LoginTest() {
-		when(userService.login(username,password)).thenReturn(true);
-		assertEquals(true,userService.login(username ,password));
+		when(userService.checkLogin(username, password)).
+		thenReturn(true);
+		
+		assertEquals(true, userService.
+		    checkLogin(username ,password));
 	}
 	@Test
 	public void LoginFailureTest() {
-		when(userService.login(username,password)).thenReturn(false);
-		assertEquals(false,userService.login(username ,password));
+		when(userService.checkLogin(username,password)).
+		thenReturn(false);
+		assertEquals(false,userService.
+		    checkLogin(username ,password));
 	}
 	
 	@Test
 	public void LoginVerificationAnyStringUsername() {
-		userService.login(null, password);
-		verify(userService).login(anyString(),eq(password));	
+		userService.checkLogin(null, password);
+		verify(userService).checkLogin(anyString(),eq(password));	
 	}
 	@Test
 	public void LoginVerificationAnyStringPassword() {
-		userService.login(username, null);
-		verify(userService).login(eq(username),anyString());		
+		userService.checkLogin(username, null);
+		verify(userService).checkLogin(eq(username),anyString());		
 	}
 	@Test
 	public void RegisterTest(){

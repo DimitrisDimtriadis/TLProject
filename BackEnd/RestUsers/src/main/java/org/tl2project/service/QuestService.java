@@ -39,10 +39,7 @@ public class QuestService {
     
     BigDecimal distance = new BigDecimal(0.001);
       
-    //List<BigDecimal> point1 = new ArrayList<BigDecimal>();
-    //point1.add(lat.subtract(distance));
-    //point1.add(lng);
-    //list.add(point1);
+    
     points.add(Arrays.asList(lat.subtract(distance),lng));
     
     points.add(Arrays.asList(lat.add(distance),lng));
