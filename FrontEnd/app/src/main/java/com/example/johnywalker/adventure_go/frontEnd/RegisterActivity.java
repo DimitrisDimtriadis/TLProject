@@ -1,7 +1,9 @@
 package com.example.johnywalker.adventure_go.frontEnd;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -9,10 +11,13 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.johnywalker.adventure_go.controller.IDao;
-import com.example.johnywalker.adventure_go.controller.MockDatabase;
+import com.example.johnywalker.adventure_go.controller.Controller;
+import com.example.johnywalker.adventure_go.miscellaneous.ValidateString;
+import com.example.johnywalker.adventure_go.mockController.IDao;
 import com.example.johnywalker.adventure_go.R;
+import com.example.johnywalker.adventure_go.mockController.MockDatabase;
 
 /**
  * Created by JohnyWalker94 on 03-Nov-16.
@@ -22,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity
 {
     //Variables
     //Database connection
-    private IDao mDatabaseConnection  = null;
+    private IDao mController = null;
 
     //Activity inputs
     private AutoCompleteTextView mUsernameView;
@@ -34,10 +39,22 @@ public class RegisterActivity extends AppCompatActivity
     private String email;
     private String password;
 
+    private ValidateString validate;
+    private String errorMessage;
+
+    private boolean userExists = false;
+    private boolean userRegistered = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        if(Build.VERSION.SDK_INT > 9)
+        {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
         mUsernameView = (AutoCompleteTextView) findViewById(R.id.username);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -55,14 +72,24 @@ public class RegisterActivity extends AppCompatActivity
             }
         });
 
-        Button mRegisterButton = (Button) findViewById(R.id.email_register_button);
+        Button mRegisterButton = (Button) findViewById(R.id.register_button);
+        Button mLoginButton = (Button) findViewById(R.id.login_button);
+
         mRegisterButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
-                RegisterActivity.this.startActivity(myIntent);
+                attemptRegister();
+            }
+        });
+
+        mLoginButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                 finish();
             }
         });
@@ -75,36 +102,74 @@ public class RegisterActivity extends AppCompatActivity
         email = mEmailView.getText().toString();
         password = mPasswordView.getText().toString();
 
-        mDatabaseConnection = initializeDatabaseConnection();
+        mController = initializeController();
+        validate = new ValidateString();
 
-        if(attemptDatabaseConnection())
+        if(!validateString(username))
         {
-            if(!userExists(email, password) && registerUser(username, email, password));
-            {
-                Intent myIntent = new Intent(RegisterActivity.this, LoginActivity.class);
-                RegisterActivity.this.startActivity(myIntent);
-                finish();
-            }
+            Toast.makeText(this, "Error! Username " + errorMessage, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else if(!validateString(email))
+        {
+            Toast.makeText(this, "Error! Email " + errorMessage, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else if(!validateString(password))
+        {
+            Toast.makeText(this, "Error! Password " + errorMessage, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        userExists = userExists(username, password);
+        userRegistered = registerUser(username, email, password);
+
+        if (!userExists && userRegistered)
+        {
+            Toast.makeText(this, "Register successful", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            finish();
+        } else if (userExists)
+        {
+            Toast.makeText(this, "User already exists", Toast.LENGTH_LONG).show();
+        } else if (!userRegistered)
+        {
+            Toast.makeText(this, "Unable to register", Toast.LENGTH_LONG).show();
+        } else
+        {
+            Toast.makeText(this, "Error. Try again later", Toast.LENGTH_LONG).show();
         }
     }
 
-    public IDao initializeDatabaseConnection()
+    public IDao initializeController()
     {
-        return new MockDatabase();
+        return new Controller();
     }
 
-    public boolean attemptDatabaseConnection()
+    public boolean userExists(String username, String pass)
     {
-        return mDatabaseConnection.attemptDatabaseConnection();
-    }
-
-    public boolean userExists(String mail, String pass)
-    {
-        return mDatabaseConnection.verifyUser(mail, pass);
+        return mController.attemptUserVerification(username, pass);
     }
 
     public boolean registerUser(String name, String mail, String pass)
     {
-        return mDatabaseConnection.registerUser(name, mail, pass);
+        return mController.attemptUserRegistration(name, mail, pass);
+    }
+
+    public boolean validateString(String string)
+    {
+        int result;
+
+        result = validate.validateString(string);
+        errorMessage = validate.getErrorMessage(result);
+
+        if(result == 100)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

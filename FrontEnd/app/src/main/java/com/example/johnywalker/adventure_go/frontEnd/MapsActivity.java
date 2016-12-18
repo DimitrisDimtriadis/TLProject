@@ -21,6 +21,9 @@ import com.google.android.gms.maps.model.LatLng;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener
 {
+    private static final int waitTime = 2000;
+    private long mBackPressed;
+    private Toast mExitToast;
 
     private GoogleMap mMap;
     private SupportMapFragment mapFrag;
@@ -43,6 +46,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 6000, 100, this);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        if(mBackPressed + waitTime > System.currentTimeMillis())
+        {
+            mExitToast.cancel();
+            finish();
+            super.onBackPressed();
+            return;
+        }
+        else
+        {
+            mExitToast = Toast.makeText(getBaseContext(), "Tap again to exit", Toast.LENGTH_SHORT);
+            mExitToast.show();
+        }
+        mBackPressed = System.currentTimeMillis();
     }
 
     @Override
