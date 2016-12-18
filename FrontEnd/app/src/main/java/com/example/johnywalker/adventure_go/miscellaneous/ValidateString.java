@@ -1,7 +1,7 @@
 package com.example.johnywalker.adventure_go.miscellaneous;
 
 /**
- * Created by JohnyWalker94 on 15-Dec-16.
+ * Created by JohnyWalker on 12/15/2016.
  */
 public class ValidateString
 {
@@ -39,6 +39,15 @@ public class ValidateString
 			}
 		}
 		
+		return 100;
+	}
+
+	public int validateEmailString(String s)
+	{
+        if(s.length() > 30)
+        {
+            return 400;
+        }
 		return 100;
 	}
 

@@ -3,7 +3,7 @@ package com.example.johnywalker.adventure_go.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Created by Dimitriadis983 on 14-Dec-16.
+ * Created by JohnyWalker on 12/14/2016.
  */
 
 @JsonIgnoreProperties(ignoreUnknown = true)

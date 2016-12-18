@@ -20,7 +20,7 @@ import com.example.johnywalker.adventure_go.R;
 import com.example.johnywalker.adventure_go.mockController.MockDatabase;
 
 /**
- * Created by JohnyWalker94 on 03-Nov-16.
+ * Created by JohnyWalker on 11/03/2016.
  */
 
 public class RegisterActivity extends AppCompatActivity
@@ -110,7 +110,7 @@ public class RegisterActivity extends AppCompatActivity
             Toast.makeText(this, "Error! Username " + errorMessage, Toast.LENGTH_SHORT).show();
             return;
         }
-        else if(!validateString(email))
+        else if(!validateString(email) && !validateEmailString(email))
         {
             Toast.makeText(this, "Error! Email " + errorMessage, Toast.LENGTH_SHORT).show();
             return;
@@ -161,6 +161,23 @@ public class RegisterActivity extends AppCompatActivity
         int result;
 
         result = validate.validateString(string);
+        errorMessage = validate.getErrorMessage(result);
+
+        if(result == 100)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public boolean validateEmailString(String string)
+    {
+        int result;
+
+        result = validate.validateEmailString(string);
         errorMessage = validate.getErrorMessage(result);
 
         if(result == 100)

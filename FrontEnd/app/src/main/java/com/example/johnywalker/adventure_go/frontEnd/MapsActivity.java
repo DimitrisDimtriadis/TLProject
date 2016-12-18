@@ -5,13 +5,15 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
+
 import com.example.johnywalker.adventure_go.R;
+import com.example.johnywalker.adventure_go.controller.Controller;
+import com.example.johnywalker.adventure_go.miscellaneous.QuestManager;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,6 +31,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private SupportMapFragment mapFrag;
     private LocationManager locationManager;
 
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+
+    private Controller controller;
+
+    private Location initialLocation;
+    private QuestManager questManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,13 +44,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        //Checking if it need diffrent permission access
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-        {
-            checkLocationPermission();
-        }
+        checkLocationPermission();
+
         mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
+
+        controller = getIntent().getParcelableExtra("controller");
+        questManager = new QuestManager(this);
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 6000, 100, this);
@@ -51,14 +59,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onBackPressed()
     {
-        if(mBackPressed + waitTime > System.currentTimeMillis())
+        if (mBackPressed + waitTime > System.currentTimeMillis())
         {
             mExitToast.cancel();
             finish();
             super.onBackPressed();
             return;
-        }
-        else
+        } else
         {
             mExitToast = Toast.makeText(getBaseContext(), "Tap again to exit", Toast.LENGTH_SHORT);
             mExitToast.show();
@@ -71,59 +78,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     {
         mMap = googleMap;
 
-        //checking again about sdk
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
         {
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
-            {
-                mMap.setMyLocationEnabled(true);
-            }
+            mMap.setMyLocationEnabled(true);
         }
-
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-//        LatLng myHome = new LatLng(41.088405, 23.545148);
-//        mMap.addMarker(new MarkerOptions().position(myHome).title("Marker in my home"));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myHome, 14));
 
-//        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13));
-
-//        mMap.addPolyline(new PolylineOptions().add(
-//                myHome,
-//                teiCM,
-//                militaryBase,
-//                myHome
-//                ).color(Color.RED).width(10)
-//        );
+        //TODO: questManager.generateQuests("current location");
     }
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
-    public boolean checkLocationPermission() {
+    public boolean checkLocationPermission()
+    {
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
         {
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.ACCESS_FINE_LOCATION))
             {
-
-                // Show an expanation to the user *asynchronously* -- don't block
-                // this thread waiting for the user's response! After the user
-                // sees the explanation, try again to request the permission.
-                //  TODO: Prompt with explanation!
-
                 ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_LOCATION);
-
-            }
-            else
+            } else
             {
                 ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_LOCATION);
             }
             return false;
-        } else {
+        } else
+        {
             return true;
         }
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
+    {
         switch (requestCode)
         {
             case MY_PERMISSIONS_REQUEST_LOCATION:
@@ -150,6 +135,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onLocationChanged(Location location)
     {
+        questManager.checkValidQuestRadius(location);
+
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 17);
         mMap.animateCamera(cameraUpdate);
@@ -168,5 +155,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onProviderDisabled(String s)
     {
+    }
+
+    public void setInitialLocation(Location initialLocation)
+    {
+        this.initialLocation = initialLocation;
+    }
+
+    public Controller getController()
+    {
+        return controller;
+    }
+
+    public Location getInitialLocation()
+    {
+        return initialLocation;
+    }
+
+    public GoogleMap getMap()
+    {
+        return mMap;
     }
 }

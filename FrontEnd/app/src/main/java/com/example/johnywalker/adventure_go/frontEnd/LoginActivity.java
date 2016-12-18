@@ -2,6 +2,7 @@ package com.example.johnywalker.adventure_go.frontEnd;
 
 import android.content.Intent;
 import android.os.Build;
+import android.os.Parcelable;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ import com.example.johnywalker.adventure_go.R;
 import com.example.johnywalker.adventure_go.miscellaneous.ValidateString;
 
 /**
- * Created by JohnyWalker94 on 01-Nov-16.
+ * Created by JohnyWalker on 11/01/2016.
  */
 
 public class LoginActivity extends AppCompatActivity
@@ -122,7 +123,9 @@ public class LoginActivity extends AppCompatActivity
         if(userExists)
         {
             Toast.makeText(this, "Login successful", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(LoginActivity.this, MapsActivity.class));
+            Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
+            intent.putExtra("controller", (Parcelable) mController);
+            startActivity(intent);
             finish();
         }
         else if(!userExists)

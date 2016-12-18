@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 /**
- * Created by Dimitriadis983 on 14-Dec-16.
+ * Created by JohnyWalker on 12/14/2016.
  */
 
 public class UserRegistration

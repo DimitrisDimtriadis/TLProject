@@ -10,12 +10,12 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 /**
- * Created by Dimitriadis983 on 14-Dec-16.
+ * Created by JohnyWalker on 12/14/2016.
  */
 
 public class UserVerification
 {
-    //private User user;
+    private User user;
 
     public boolean attemptUserVerification(String username, String password)
     {
@@ -32,7 +32,7 @@ public class UserVerification
             {
             });
 
-            //setUser(userResponse.getBody());
+            setUser(userResponse.getBody());
 
             if(userResponse.getStatusCode() == HttpStatus.OK)
             {
@@ -56,7 +56,7 @@ public class UserVerification
         }
     }
 
-    /*public User getUser()
+    public User getUser()
     {
         return user;
     }
@@ -64,5 +64,5 @@ public class UserVerification
     public void setUser(User u)
     {
         user = u;
-    }*/
+    }
 }
