@@ -1,17 +1,30 @@
 package com.example.johnywalker.adventure_go.frontEnd;
 
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.widget.Toast;
 import com.example.johnywalker.adventure_go.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.location.GeofencingRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,8 +32,19 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener
+public class MapsActivity extends FragmentActivity
+        implements
+            OnMapReadyCallback,
+            LocationListener,
+            GoogleApiClient.ConnectionCallbacks,
+            GoogleApiClient.OnConnectionFailedListener
 {
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    public static final String TAG="MapsActivity";
+    public static final String MY_GEOFENCE_ID = "MyGeofenceID";
+
+    GoogleApiClient googleApiClient = null;
+
     private static final int waitTime = 2000;
     private long mBackPressed;
     private Toast mExitToast;
@@ -36,6 +60,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this, this)
+                .addApi(LocationServices.API)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .build();
+
         //Checking if it need diffrent permission access
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
         {
@@ -43,9 +74,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
+        GeoFenceMonitoring();
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 6000, 100, this);
+        GeoFenceMonitoring();
+
     }
 
     @Override
@@ -81,21 +115,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-//        LatLng myHome = new LatLng(41.088405, 23.545148);
-//        mMap.addMarker(new MarkerOptions().position(myHome).title("Marker in my home"));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myHome, 14));
-
-//        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13));
-
-//        mMap.addPolyline(new PolylineOptions().add(
-//                myHome,
-//                teiCM,
-//                militaryBase,
-//                myHome
-//                ).color(Color.RED).width(10)
-//        );
     }
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
     public boolean checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
@@ -117,7 +137,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_LOCATION);
             }
             return false;
-        } else {
+        } else
+        {
             return true;
         }
     }
@@ -153,6 +174,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 17);
         mMap.animateCamera(cameraUpdate);
+        Log.d(TAG, "Location update lat/lot: " + location.getLatitude() + " " + location.getLongitude());
+    }
+
+    @Override
+    public void onResume()
+    {
+        Log.d(TAG, "onResume called");
+        super.onResume();
+        int response = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
+
+        if (response != ConnectionResult.SUCCESS)
+        {
+            Log.d(TAG, "Google play Services not Available - show dialog to ask user to download it ");
+            GoogleApiAvailability.getInstance().getErrorDialog(this, response, 1).show();
+        } else
+        {
+            Log.d(TAG, "Google play Services is available - no action required");
+        }
+    }
+
+    @Override
+    public void onStart()
+    {
+        Log.d(TAG, "onStart called");
+        super.onStart();
+        googleApiClient.reconnect();
+    }
+
+    @Override
+    public void onStop()
+    {
+        Log.d(TAG, "onStop called");
+        super.onStop();
+        googleApiClient.disconnect();
     }
 
     @Override
@@ -168,5 +223,79 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onProviderDisabled(String s)
     {
+    }
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle)
+    {
+        Log.d(TAG,"Connected to Google Api Client");
+        GeoFenceMonitoring();
+    }
+
+    @Override
+    public void onConnectionSuspended(int i)
+    {
+        Log.d(TAG,"Suspended connection to Google Api Client");
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult)
+    {
+        Log.d(TAG, "Failed to connect to  Google Api Client - " + connectionResult.getErrorMessage());
+        googleApiClient.reconnect();
+    }
+
+    public void GeoFenceMonitoring()
+    {
+        Geofence geofence = new Geofence.Builder()
+                .setRequestId(MY_GEOFENCE_ID)
+                .setCircularRegion(41.086671, 23.534352, 100)
+                .setExpirationDuration(Geofence.NEVER_EXPIRE)
+                .setNotificationResponsiveness(1000)
+                .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_EXIT)
+                .build();
+
+        GeofencingRequest geofencingRequest = new GeofencingRequest.Builder()
+                .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
+                .addGeofence(geofence)
+                .build();
+
+        Intent intent = new Intent(this, GeofenceService.class);
+        PendingIntent pendingIntent = PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        if (!googleApiClient.isConnected())
+        {
+            Log.d(TAG, "!!!!_________________________________________ GoogleApiClient is not connected");
+
+        } else
+        {
+            Log.d(TAG, "!!!! _________________________________________!!!!!!!!");
+
+            if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            {
+                checkLocationPermission();
+            }
+
+
+            LocationServices.GeofencingApi.addGeofences(googleApiClient, geofencingRequest, pendingIntent)
+                    .setResultCallback(new ResultCallback<Status>()
+                    {
+                        @Override
+                        public void onResult(@NonNull Status status)
+                        {
+                            checkLocationPermission();
+
+                            if (status.isSuccess())
+                            {
+                                Log.d(TAG, String.valueOf(status.getStatusCode()));
+                                Log.d(TAG, "!!!! Successfully added to geofence");
+                            } else
+                            {
+                                Log.d(TAG, "!!!! Failed to add geofence");
+                                Log.d(TAG, "Called... FAILURE: " + status.getStatusMessage() + " code: " + status.getStatusCode());
+                            }
+                        }
+                    });
+        }
     }
 }
