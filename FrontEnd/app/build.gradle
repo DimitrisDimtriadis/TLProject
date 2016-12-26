@@ -31,6 +31,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:9.4.0'
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.google.android.gms:play-services-location:8.1.0'
+    compile 'com.android.volley:volley:1.0.0'
 
     //Dependencies about Testing with junit, uiAutomator and espresso
     testCompile 'junit:junit:4.12'
@@ -42,9 +43,4 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
         exclude group: 'com.android.support'
     }
-//    androidTestCompile('com.android.support.test.espresso:espresso-intents:2.2.2') {
-//        exclude group: 'com.android.support'
-//
-//
-//    }
 }
