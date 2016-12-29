@@ -35,12 +35,9 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.location.FusedLocationProviderApi;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import com.google.android.gms.maps.SupportMapFragment;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -63,7 +60,6 @@ public class MapsActivity extends FragmentActivity
 {
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     public static final String TAG = "MapsActivity";
-    public static final String MY_GEOFENCE_ID = "MyGeofenceID";
     GoogleApiClient googleApiClient = null;
     private static final int waitTime = 2000;
     private long mBackPressed;
@@ -73,11 +69,10 @@ public class MapsActivity extends FragmentActivity
     private LocationManager locationManager;
 
     private LocationRequest mLocationRequest;
-    private FusedLocationProviderApi locationProvider = LocationServices.FusedLocationApi;
     private Double myLatitude;
     private Double myLongitude;
     TextView showLong, showLat;
-
+    private Location mLastLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -105,12 +100,6 @@ public class MapsActivity extends FragmentActivity
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 6000, 100, this);
-
-//        mLocationRequest = new LocationRequest();
-//        mLocationRequest.setInterval(60 * 1000);
-//        mLocationRequest.setFastestInterval(15 * 1000);
-//        mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-
     }
 
     @Override
@@ -134,9 +123,6 @@ public class MapsActivity extends FragmentActivity
     public void onMapReady(GoogleMap googleMap)
     {
         mMap = googleMap;
-
-
-
         //checking again about sdk
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
         {
@@ -145,7 +131,6 @@ public class MapsActivity extends FragmentActivity
                 mMap.setMyLocationEnabled(true);
             }
         }
-
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
 
@@ -206,18 +191,7 @@ public class MapsActivity extends FragmentActivity
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 17);
         mMap.animateCamera(cameraUpdate);
-        Log.d(TAG, "Location update lat/lot: " + location.getLatitude() + " " + location.getLongitude());
-
-        myLatitude = location.getLatitude();
-        myLongitude = location.getLongitude();
-        showLong.setText(Double.toString(myLongitude));
-        showLong.setText(Double.toString(myLatitude));
-
-//        String url = "http://83.212.100.247:8090/quest/getQuests?latitude=15.23&longitude=14.52&score=5";
-        String url = "http://83.212.100.247:8090/quest/getQuests?latitude=" + Double.toString(myLatitude) + "&longitude=" + Double.toString(myLongitude) + "&score=5";
-        getJsonrequest(url);
-
-        //updateMarkers(myLatitude,myLongitude);
+//        Log.d(TAG, "Location update lat/lot: " + location.getLatitude() + " " + location.getLongitude());
     }
 
     @Override
@@ -285,14 +259,25 @@ public class MapsActivity extends FragmentActivity
     public void onConnected(@Nullable Bundle bundle)
     {
         Log.d(TAG, "Connected to Google Api Client");
-        GeoFenceMonitoring();
-
+//        GeoFenceMonitoring();
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
         {
             // TODO: Consider calling
             return;
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 6000, 100, this);
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                googleApiClient);
+        if (mLastLocation != null) {
+            showLat.setText(String.valueOf(mLastLocation.getLatitude()));
+            showLong.setText(String.valueOf(mLastLocation.getLongitude()));
+        }
+        myLatitude = mLastLocation.getLatitude();
+        myLongitude = mLastLocation.getLongitude();
+
+//        String url = "http://83.212.100.247:8090/quest/getQuests?latitude=15.23&longitude=14.52&score=5";
+        String url = "http://83.212.100.247:8090/quest/getQuests?latitude=" + Double.toString(myLatitude) + "&longitude=" + Double.toString(myLongitude) + "&score=5";
+        getJsonrequest(url);
     }
 
     @Override
@@ -314,39 +299,22 @@ public class MapsActivity extends FragmentActivity
         googleApiClient.reconnect();
     }
 
-    public void GeoFenceMonitoring()
+    public void GeoFenceMonitoring(GeofencingRequest geofencingrequest)
     {
-        Geofence geofence = new Geofence.Builder()
-                .setRequestId(MY_GEOFENCE_ID)
-                .setCircularRegion(41.086671, 23.534352, 100)
-                .setExpirationDuration(Geofence.NEVER_EXPIRE)
-                .setNotificationResponsiveness(1000)
-                .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_EXIT)
-                .build();
-
-        GeofencingRequest geofencingRequest = new GeofencingRequest.Builder()
-                .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
-                .addGeofence(geofence)
-                .build();
-
         Intent intent = new Intent(this, GeofenceService.class);
         PendingIntent pendingIntent = PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         if (!googleApiClient.isConnected())
         {
-            Log.d(TAG, "!!!!_________________________________________ GoogleApiClient is not connected");
+            Log.d(TAG, "GoogleApiClient is not connected  !!!");
 
         } else
         {
-            Log.d(TAG, "!!!! _________________________________________!!!!!!!!");
-
             if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
             {
                 checkLocationPermission();
             }
-
-
-            LocationServices.GeofencingApi.addGeofences(googleApiClient, geofencingRequest, pendingIntent)
+            LocationServices.GeofencingApi.addGeofences(googleApiClient, geofencingrequest, pendingIntent)
                     .setResultCallback(new ResultCallback<Status>()
                     {
                         @Override
@@ -357,10 +325,10 @@ public class MapsActivity extends FragmentActivity
                             if (status.isSuccess())
                             {
                                 Log.d(TAG, String.valueOf(status.getStatusCode()));
-                                Log.d(TAG, "!!!! Successfully added to geofence");
+                                Log.d(TAG, "Successfully added to geofence");
                             } else
                             {
-                                Log.d(TAG, "!!!! Failed to add geofence");
+                                Log.d(TAG, "Failed to add geofence");
                                 Log.d(TAG, "Called... FAILURE: " + status.getStatusMessage() + " code: " + status.getStatusCode());
                             }
                         }
@@ -393,10 +361,23 @@ public class MapsActivity extends FragmentActivity
                                         riddle.getString("category"),
                                         riddle.getString("difficulty"));
                                 String Question = riddles.getQuestion();
-                                Double Longitude = quest.getLongitude();
                                 LatLng Point = new LatLng(quest.getLatitude(), quest.getLongitude());
                                 mMap.addMarker(new MarkerOptions().position(Point).title(Question));
-                                //Geofence monitoring
+
+                                Geofence geofence = new Geofence.Builder()
+                                        .setRequestId(riddle.getString("question"))
+                                        .setCircularRegion(quest.getLatitude(), quest.getLongitude(),25)
+                                        .setExpirationDuration(Geofence.NEVER_EXPIRE)
+                                        .setNotificationResponsiveness(1000)
+                                        .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_EXIT)
+                                        .build();
+
+                                GeofencingRequest geofencingRequest = new GeofencingRequest.Builder()
+                                    .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
+                                    .addGeofence(geofence)
+                                    .build();
+                                GeoFenceMonitoring(geofencingRequest);
+
 
                                 count++;
                             } catch (JSONException e)
@@ -417,6 +398,5 @@ public class MapsActivity extends FragmentActivity
                 }
         );
         MySingleton.getInstance(MapsActivity.this).addToRequestqueue(jsonArrayRequest);
-
     }
 }
