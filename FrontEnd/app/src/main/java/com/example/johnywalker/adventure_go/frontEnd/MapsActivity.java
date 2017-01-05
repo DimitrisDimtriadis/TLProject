@@ -364,9 +364,10 @@ public class MapsActivity extends FragmentActivity
                                 LatLng Point = new LatLng(quest.getLatitude(), quest.getLongitude());
                                 mMap.addMarker(new MarkerOptions().position(Point).title(Question));
 
+
                                 Geofence geofence = new Geofence.Builder()
                                         .setRequestId(riddle.getString("question"))
-                                        .setCircularRegion(quest.getLatitude(), quest.getLongitude(),25)
+                                        .setCircularRegion(quest.getLatitude(), quest.getLongitude(),50)
                                         .setExpirationDuration(Geofence.NEVER_EXPIRE)
                                         .setNotificationResponsiveness(1000)
                                         .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_EXIT)
@@ -377,7 +378,6 @@ public class MapsActivity extends FragmentActivity
                                     .addGeofence(geofence)
                                     .build();
                                 GeoFenceMonitoring(geofencingRequest);
-
 
                                 count++;
                             } catch (JSONException e)
