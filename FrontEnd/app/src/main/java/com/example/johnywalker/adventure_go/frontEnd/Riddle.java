@@ -19,6 +19,7 @@ public class Riddle
         this.setDifficulty(difficulty);
 
     }
+    public Riddle(){}
 
     public int getId() {
         return id;
