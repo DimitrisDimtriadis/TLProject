@@ -377,6 +377,7 @@ public class MapsActivity extends FragmentActivity
                                     .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
                                     .addGeofence(geofence)
                                     .build();
+
                                 GeoFenceMonitoring(geofencingRequest);
 
                                 count++;

@@ -1,12 +1,8 @@
 package com.example.johnywalker.adventure_go.frontEnd;
 
 import android.app.IntentService;
-import android.content.Context;
 import android.content.Intent;
-import android.provider.Settings;
 import android.util.Log;
-
-import com.example.johnywalker.adventure_go.R;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingEvent;
 
@@ -23,7 +19,6 @@ public class GeofenceService extends IntentService
     public GeofenceService()
     {
         super(TAG);
-
     }
 
     @Override
@@ -35,23 +30,21 @@ public class GeofenceService extends IntentService
         List<Geofence> geofences = event.getTriggeringGeofences();
         Geofence geofence = geofences.get(0);
         String requestId = geofence.getRequestId();
+        Testing testing = new Testing();
 
         if(event.hasError())
         {
-
             Log.d(TAG, "Houston we have a problem - " + requestId + transition);
         }
         else
         {
-
             if(transition == Geofence.GEOFENCE_TRANSITION_ENTER)
             {
                 Log.d(TAG,"Entering geofence - "+ requestId);
+                testing.setReqID(requestId);
                 Intent viewIntent = new Intent(GeofenceService.this,PopMenu.class);
                 viewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(viewIntent);
-
-
             }
             else if (transition == Geofence.GEOFENCE_TRANSITION_EXIT)
             {
@@ -59,4 +52,5 @@ public class GeofenceService extends IntentService
             }
         }
     }
+
 }
