@@ -41,7 +41,7 @@ public class Riddle implements Serializable{
 
   public Riddle(String question, String answer, String hint, String category, int points, String difficulty) {
     this.question = question;
-    this.answer = answer;
+    this.answer = answer; 
     this.hint = hint;
     this.category = category;
     this.difficulty = difficulty;

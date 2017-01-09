@@ -32,7 +32,7 @@ public class QuestController {
       @RequestParam(value="score", required=true) Long score) {
       
       
-    return questservice.produceQuests(lat, lng, score);
+    return questservice.produceQuests(lat, lng, score); 
           
   }
 
