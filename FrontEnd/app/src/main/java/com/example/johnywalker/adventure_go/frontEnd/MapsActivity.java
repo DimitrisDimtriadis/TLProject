@@ -71,7 +71,7 @@ public class MapsActivity extends FragmentActivity
     private LocationRequest mLocationRequest;
     private Double myLatitude;
     private Double myLongitude;
-    TextView showLong, showLat;
+    TextView showLong, showLat, showScore;
     private Location mLastLocation;
     private GlobalVariables globalVariables = new GlobalVariables();
 
@@ -83,6 +83,8 @@ public class MapsActivity extends FragmentActivity
 
         showLong = (TextView) findViewById(R.id.tvDuration);
         showLat = (TextView) findViewById(R.id.tvDistance);
+        showScore = (TextView) findViewById(R.id.scoreView);
+        showScore.setText(globalVariables.getUser().getScore().toString());
 
         googleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this, this)

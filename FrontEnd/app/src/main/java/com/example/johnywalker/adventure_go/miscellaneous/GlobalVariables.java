@@ -1,5 +1,7 @@
 package com.example.johnywalker.adventure_go.miscellaneous;
 
+import com.example.johnywalker.adventure_go.models.User;
+
 /**
  * Created by Dimitriadis983 on 06-Jan-17.
  */
@@ -8,6 +10,7 @@ public class GlobalVariables
 {
     public static String reqId;
     public static String url;
+    public static User user;
 
     public void setUrl(String url)
     {
@@ -28,5 +31,15 @@ public class GlobalVariables
     public String getReqID()
     {
         return this.reqId;
+    }
+
+    public void setUser(User user)
+    {
+        this.user = user;
+    }
+
+    public User getUser()
+    {
+        return user;
     }
 }

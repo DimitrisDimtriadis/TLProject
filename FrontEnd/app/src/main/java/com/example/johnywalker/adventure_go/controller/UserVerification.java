@@ -1,5 +1,6 @@
 package com.example.johnywalker.adventure_go.controller;
 
+import com.example.johnywalker.adventure_go.miscellaneous.GlobalVariables;
 import com.example.johnywalker.adventure_go.models.User;
 
 import org.springframework.core.ParameterizedTypeReference;
@@ -15,7 +16,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 public class UserVerification
 {
-    //private User user;
+    private GlobalVariables globalVariables = new GlobalVariables();
 
     public boolean attemptUserVerification(String username, String password)
     {
@@ -32,7 +33,7 @@ public class UserVerification
             {
             });
 
-            //setUser(userResponse.getBody());
+            globalVariables.setUser(userResponse.getBody());
 
             if(userResponse.getStatusCode() == HttpStatus.OK)
             {
@@ -55,14 +56,4 @@ public class UserVerification
             return false;
         }
     }
-
-    /*public User getUser()
-    {
-        return user;
-    }
-
-    public void setUser(User u)
-    {
-        user = u;
-    }*/
 }
