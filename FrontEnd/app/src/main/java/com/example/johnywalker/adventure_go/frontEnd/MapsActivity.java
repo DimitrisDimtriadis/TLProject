@@ -8,18 +8,27 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.johnywalker.adventure_go.R;
+import com.example.johnywalker.adventure_go.miscellaneous.GeofenceService;
+import com.example.johnywalker.adventure_go.miscellaneous.GlobalVariables;
+import com.example.johnywalker.adventure_go.miscellaneous.MySingleton;
+import com.example.johnywalker.adventure_go.model.Quest;
+import com.example.johnywalker.adventure_go.model.Riddle;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -35,20 +44,11 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.android.volley.NetworkResponse;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
-import com.android.volley.toolbox.Volley;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 
 public class MapsActivity extends FragmentActivity
@@ -73,6 +73,7 @@ public class MapsActivity extends FragmentActivity
     private Double myLongitude;
     TextView showLong, showLat;
     private Location mLastLocation;
+    private GlobalVariables globalVariables = new GlobalVariables();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -90,7 +91,7 @@ public class MapsActivity extends FragmentActivity
                 .addOnConnectionFailedListener(this)
                 .build();
 
-        //Checking if it need diffrent permission access
+        //Checking if it needs different permission access
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
         {
             checkLocationPermission();
@@ -259,25 +260,28 @@ public class MapsActivity extends FragmentActivity
     public void onConnected(@Nullable Bundle bundle)
     {
         Log.d(TAG, "Connected to Google Api Client");
-//        GeoFenceMonitoring();
+
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
         {
             // TODO: Consider calling
             return;
         }
+
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 6000, 100, this);
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 googleApiClient);
-        if (mLastLocation != null) {
+
+        if (mLastLocation != null)
+        {
             showLat.setText(String.valueOf(mLastLocation.getLatitude()));
             showLong.setText(String.valueOf(mLastLocation.getLongitude()));
         }
         myLatitude = mLastLocation.getLatitude();
         myLongitude = mLastLocation.getLongitude();
 
-//        String url = "http://83.212.100.247:8090/quest/getQuests?latitude=15.23&longitude=14.52&score=5";
         String url = "http://83.212.100.247:8090/quest/getQuests?latitude=" + Double.toString(myLatitude) + "&longitude=" + Double.toString(myLongitude) + "&score=5";
-        getJsonrequest(url);
+        globalVariables.setUrl(url);
+        getJsonRequest(url);
     }
 
     @Override
@@ -336,9 +340,9 @@ public class MapsActivity extends FragmentActivity
         }
     }
 
-    private void getJsonrequest(String URL)
+    private void getJsonRequest(String url)
     {
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URL, null,
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>()
                 {
                     @Override
@@ -367,16 +371,16 @@ public class MapsActivity extends FragmentActivity
 
                                 Geofence geofence = new Geofence.Builder()
                                         .setRequestId(riddle.getString("question"))
-                                        .setCircularRegion(quest.getLatitude(), quest.getLongitude(),50)
+                                        .setCircularRegion(quest.getLatitude(), quest.getLongitude(), 50)
                                         .setExpirationDuration(Geofence.NEVER_EXPIRE)
                                         .setNotificationResponsiveness(1000)
                                         .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_EXIT)
                                         .build();
 
                                 GeofencingRequest geofencingRequest = new GeofencingRequest.Builder()
-                                    .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
-                                    .addGeofence(geofence)
-                                    .build();
+                                        .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
+                                        .addGeofence(geofence)
+                                        .build();
 
                                 GeoFenceMonitoring(geofencingRequest);
 
