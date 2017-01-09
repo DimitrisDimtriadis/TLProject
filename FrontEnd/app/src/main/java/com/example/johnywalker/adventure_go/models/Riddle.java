@@ -1,4 +1,4 @@
-package com.example.johnywalker.adventure_go.model;
+package com.example.johnywalker.adventure_go.models;
 
 /**
  * Created by Dimitriadis983 on 26-Dec-16.
