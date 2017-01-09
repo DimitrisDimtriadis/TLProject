@@ -1,93 +1,77 @@
 package org.tl2project;
 
-import static org.junit.Assert.*;
-
-import org.junit.Rule;
+import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
-import org.tl2project.controller.UserController;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
-import static org.mockito.Matchers.anyString;
-import static org.mockito.Matchers.eq;
+import org.junit.runner.RunWith;
 import static org.mockito.Mockito.*;
 
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.tl2project.controller.UserController;
+import org.tl2project.service.UserService;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class UserControllerTest {
-	
-	public String username = "admin";
-	public String password = "admin";
-	public String email = "email";
-	
-	@Rule
-	public MockitoRule mockitoRule = MockitoJUnit.rule();
+  
+  @Mock
+  private UserService userService;
 
-	@Mock
-	private UserController userController;
+  @InjectMocks
+  UserController userController;
 
-	@Test
-	public void registerTest() {
-		when(userController.register(username, email, password))
-			.thenReturn(new ResponseEntity<String>("User Created",HttpStatus.CREATED));
-	
-		assertEquals(new ResponseEntity<String>("User Created",HttpStatus.CREATED)
-			,userController.register(username, email, password) );
-	}
-	@Test
-	public void registerFailureTest() {
-		when(userController.register(username, email, password))
-			.thenReturn(new ResponseEntity<String>("Username or Email Already Exist",HttpStatus.IM_USED));
-		
-		assertEquals(new ResponseEntity<String>("Username or Email Already Exist",HttpStatus.IM_USED)
-			,userController.register(username, email, password) );
-	}
-	
-	@Test
-	public void RegisterVerificationAnyStringEmail() {
-		userController.register(username, null,password);
-		verify(userController).register(eq(username),anyString(),eq(password));		
-	}
-	@Test
-	public void RegisterVerificationAnyStringUsername() {
-		userController.register(null, email,password);
-		verify(userController).register(anyString(),eq(email),eq(password));		
-	}
-	@Test
-	public void RegisterVerificationAnyStringPassword() {
-		userController.register(username,email,null);
-		verify(userController).register(eq(username),eq(email),anyString());		
-	}
-	@Test
-	public void loginTest() {
-		when(userController.login(username, password))
-			.thenReturn(new ResponseEntity<String>("Login Complete",HttpStatus.OK));
-	
-		assertEquals(new ResponseEntity<String>("Login Complete",HttpStatus.OK)
-			,userController.login(username, password) );
-	}
-	@Test
-	public void loginFailureTest() {
-		when(userController.login(username, password))
-			.thenReturn(new ResponseEntity<String>("Username or password wrong",HttpStatus.NOT_FOUND));
-	
-		assertEquals(new ResponseEntity<String>("Username or password wrong",HttpStatus.NOT_FOUND)
-			,userController.login(username, password) );
-	}
-	@Test
-	public void loginVerification() {
-		userController.login(username,password);
-		verify(userController).login( username,password);		
-	}
-	@Test
-	public void loginVerificationAnyStringPassword() {
-		userController.login(username,null);
-		verify(userController).login(eq(username),anyString());		
-	}
-	@Test
-	public void loginVerificationAnyStringUsername() {
-		userController.login(null,password);
-		verify(userController).login(anyString(),eq(password));		
-	}
+  private MockMvc mockMvc;
+  
+  @Before
+  public void setup(){
+    MockitoAnnotations.initMocks(this);
+    
+    mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
+  }
+  
+  @Test
+  public void registerTest() throws Exception{
+    
+    when(userService.register("admin", "admin", "admin")).thenReturn(true);
+    
+    mockMvc.perform(get("/user/register?username=admin&email=admin&password=admin"))
+    .andExpect(status().isCreated());   
+  }
+ 
+  @Test  
+  public void registerfailTest() throws Exception{
+    
+    when(userService.register("admin", "admin", "admin")).thenReturn(false);
+    
+    mockMvc.perform(get("/user/register?username=admin&email=admin&password=admin"))
+    .andExpect(status().isImUsed());  
+  }
+  
+  @Test
+  public void loginTest() throws Exception {
+    
+    when(userService.checkLogin("admin", "admin")).thenReturn(true);
+    
+    mockMvc.perform(get("/user/login?username=admin&password=admin"))
+    .andExpect(status().isOk());  
+    
+  }
+  
+  @Test
+  public void loginfailTest() throws Exception {
+    
+    when(userService.checkLogin("admin", "admin")).thenReturn(false);
+    
+    mockMvc.perform(get("/user/login?username=admin&password=admin"))
+    .andExpect(status().isNotFound()); 
+  }
+  
 }

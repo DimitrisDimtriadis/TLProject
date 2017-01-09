@@ -2,71 +2,168 @@ package org.tl2project;
 
 import static org.junit.Assert.*;
 
-import org.junit.Rule;
+
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.tl2project.model.User;
+import org.tl2project.repository.UserRepository;
 import org.tl2project.service.UserService;
 import static org.mockito.Mockito.*;
 
-public class UserServiceTest {
+import java.util.ArrayList;
+import java.util.List;
 
-	public String username = "admin";
-	public String password = "admin"; 
-	public String email ="email";
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class UserServiceTest { 
+
+    
+  
+    @MockBean
+    private UserRepository userRepository;
+
+    @Autowired
+    UserService userService;
 	
-	@Rule
-	public MockitoRule mockitoRule = MockitoJUnit.rule();
-	
-	@Mock
-	private UserService userService;
-	
-	
+    List <User> users = new ArrayList<>();
+    
+    
 	@Test
-	public void LoginTest() {
-		when(userService.login(username,password)).thenReturn(true);
-		assertEquals(true,userService.login(username ,password));
+<<<<<<< HEAD
+	public void LoginTest() throws Exception{
+	  
+	  User user = new User("admin","admin","admin", (long) 0);
+      users.add(user);
+	  
+	  when(this.userRepository.findByUsernameAndPassword("admin", "admin")).thenReturn( users);
+		
+		assertEquals(true, userService.
+		    checkLogin(user.getUserName(),user.getPassword())); 
 	}
 	@Test
 	public void LoginFailureTest() {
-		when(userService.login(username,password)).thenReturn(false);
-		assertEquals(false,userService.login(username ,password));
+	  
+
+      User user2 = new User("admin1","admin1","admin1", (long) 0);
+      
+      
+      when(this.userRepository.findByUsernameAndPassword("admin1", "admin1")).thenReturn( users);
+        
+        assertEquals(false, userService.
+            checkLogin(user2.getUserName(),user2.getPassword()));
+=======
+	public void LoginTest() {
+		when(userService.checkLogin(username, password)).
+		thenReturn(true);
+		
+		assertEquals(true, userService.
+		    checkLogin(username ,password));
+	}
+	@Test
+	public void LoginFailureTest() {
+		when(userService.checkLogin(username,password)).
+		thenReturn(false);
+		assertEquals(false,userService.
+		    checkLogin(username ,password));
+>>>>>>> origin/TasosKobi
 	}
 	
 	@Test
 	public void LoginVerificationAnyStringUsername() {
-		userService.login(null, password);
-		verify(userService).login(anyString(),eq(password));	
+<<<<<<< HEAD
+		
+	  User user = new User("","admin","admin", (long) 0);
+     
+        assertEquals(false, userService.
+            checkLogin(user.getUserName(),user.getPassword()));
+=======
+		userService.checkLogin(null, password);
+		verify(userService).checkLogin(anyString(),eq(password));	
+>>>>>>> origin/TasosKobi
 	}
+	
 	@Test
 	public void LoginVerificationAnyStringPassword() {
-		userService.login(username, null);
-		verify(userService).login(eq(username),anyString());		
+<<<<<<< HEAD
+	  
+	  User user = new User("admin","","admin", (long) 0);
+	     
+      assertEquals(false, userService.
+          checkLogin(user.getUserName(),user.getPassword()));
+=======
+		userService.checkLogin(username, null);
+		verify(userService).checkLogin(eq(username),anyString());		
+>>>>>>> origin/TasosKobi
 	}
+	
 	@Test
-	public void RegisterTest(){
-		when(userService.register(username, email, password)).thenReturn(true);
-		assertEquals(true,userService.register(username,email,password));
+	public void RegisterTest(){ 
+	  
+	  
+      User user = new User("admin1","admin1","admin1", (long) 0);
+      
+      when(this.userRepository.findByUsernameOrEmail("admin1", "admin1")).thenReturn( users);
+        
+        assertEquals(true, userService.
+            register(user.getUserName(), user.getEmail(), user.getPassword()));
 	}
 	@Test
 	public void RegisterFailureTest(){
-		when(userService.register(username, email, password)).thenReturn(false);
-		assertEquals(false,userService.register(username,email,password));
+	  
+	  User user = new User("admin","admin","admin", (long) 0);
+      users.add(user);
+      
+      when(this.userRepository.findByUsernameOrEmail("admin", "admin")).thenReturn( users);
+        
+        assertEquals(false, userService.
+            register(user.getUserName(), user.getEmail(), user.getPassword()));
 	}	
 	@Test
 	public void RegisterVerificationAnyStringEmail() {
-		userService.register(username, null,password);
-		verify(userService).register(eq(username),anyString(),eq(password));		
+		
+	  User user = new User("admin","","admin", (long) 0);
+	     
+      assertEquals(false, userService.
+          register(user.getUserName(), user.getEmail(), user.getPassword()));
 	}
 	@Test
 	public void RegisterVerificationAnyStringUsername() {
-		userService.register(null, email,password);
-		verify(userService).register(anyString(),eq(email),eq(password));		
+		
+	  User user = new User("","admin","admin", (long) 0);
+      
+      assertEquals(false, userService.
+          register(user.getUserName(), user.getEmail(), user.getPassword()));
 	}
 	@Test
 	public void RegisterVerificationAnyStringPassword() {
-		userService.register(username,email,null);
-		verify(userService).register(eq(username),eq(email),anyString());		
+	  User user = new User("admin","admin","", (long) 0);
+      
+      assertEquals(false, userService.
+          register(user.getUserName(), user.getEmail(), user.getPassword()));
 	}
+	
+	@Test
+    public void getScoreTest() {
+	  User user = new User("admin","admin","admin", (long) 0);
+	  Long points = (long) 5;
+      
+      when(this.userRepository.findByUsername("admin")).thenReturn(user);
+        
+        assertEquals(points, userService.
+            getScore(user.getUserName(), points));
+    }
+	@Test
+    public void getUserTest() {
+      User user = new User("admin","admin","admin", (long) 0);
+      
+      
+      when(this.userRepository.findByUsername("admin")).thenReturn(user);
+        
+        assertEquals(user, userService.
+            getUser(user.getUserName()));
+    }
 }
