@@ -13,7 +13,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.johnywalker.adventure_go.R;
 import com.example.johnywalker.adventure_go.miscellaneous.GlobalVariables;
 import com.example.johnywalker.adventure_go.miscellaneous.MySingleton;
-import com.example.johnywalker.adventure_go.model.Riddle;
+import com.example.johnywalker.adventure_go.models.Riddle;
 
 import org.json.JSONArray;
 import org.json.JSONException;
