@@ -31,19 +31,20 @@ public class QuestService {
     
     assignPointsToQuests(quests, difficulty, points);
     
-    return quests;
+    return quests;  
   }
   
   
-  private void calculatePoints(BigDecimal lat, BigDecimal lng, List<List<BigDecimal>> points){
+  public void calculatePoints(BigDecimal lat, BigDecimal lng, List<List<BigDecimal>> points){
     
     BigDecimal distance = new BigDecimal(0.001);
       
-    //List<BigDecimal> point1 = new ArrayList<BigDecimal>();
-    //point1.add(lat.subtract(distance));
-    //point1.add(lng);
-    //list.add(point1);
+    
+<<<<<<< HEAD
+    points.add(Arrays.asList(lat.subtract(distance),lng)); 
+=======
     points.add(Arrays.asList(lat.subtract(distance),lng));
+>>>>>>> origin/TasosKobi
     
     points.add(Arrays.asList(lat.add(distance),lng));
     
@@ -53,7 +54,7 @@ public class QuestService {
       
   }
   
-  private void assignPointsToQuests( ArrayList<Quest> quests, String difficulty, List<List<BigDecimal>> points){
+  public void assignPointsToQuests( ArrayList<Quest> quests, String difficulty, List<List<BigDecimal>> points){
         
       int i=0, j=0;
       List<Riddle> riddles = repository.findByDifficulty(difficulty);
@@ -61,7 +62,7 @@ public class QuestService {
       for(i=0;i< 4;i++){
         
         Quest quest = new Quest();
-        quest.setRiddle(riddles.get(i));
+        quest.setRiddle(riddles.get(i));    
         for(j=0;j< 2;j++){
           
           if(j==0){
@@ -73,10 +74,10 @@ public class QuestService {
          }
         }
         quests.add(quest);
-      }
+      } 
   }
   
-  private String calculateDifficulty(Long score){
+  public String calculateDifficulty(Long score){
     String difficulty = new String();
     
     if(score<20){
@@ -88,7 +89,7 @@ public class QuestService {
     else if(score>=50 && score < 100 ){
       difficulty = "HARD";
     }
-    else if(score>=50 && score < 100 ){
+    else if(score >= 100 ){
       difficulty = "VERY HARD";
     }
     
