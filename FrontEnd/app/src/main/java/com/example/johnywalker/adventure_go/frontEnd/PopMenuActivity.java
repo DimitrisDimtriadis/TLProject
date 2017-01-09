@@ -13,6 +13,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.johnywalker.adventure_go.R;
 import com.example.johnywalker.adventure_go.miscellaneous.GlobalVariables;
 import com.example.johnywalker.adventure_go.miscellaneous.MySingleton;
+import com.example.johnywalker.adventure_go.miscellaneous.Randomize;
 import com.example.johnywalker.adventure_go.models.Riddle;
 
 import org.json.JSONArray;
@@ -24,7 +25,6 @@ import org.json.JSONObject;
  */
 public class PopMenuActivity extends Activity
 {
-    //    public static final String TAG = "GeofenceService";
     static String mData[][];
     GlobalVariables globalVariables = new GlobalVariables();
 
@@ -48,7 +48,6 @@ public class PopMenuActivity extends Activity
 
     protected void retrieveDataFromJson()
     {
-//        String URL = "http://83.212.100.247:8090/quest/getQuests?latitude=15.23&longitude=14.52&score=5";
         String URL = globalVariables.getUrl();
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONArray>()
@@ -111,14 +110,15 @@ public class PopMenuActivity extends Activity
         for (int i = 0; i < mData.length; i++)
         {
             asd1 = requestID;
-            System.out.println("asd1: " + asd1);
-
             asd2 = mData[i][0];
-            System.out.println("asd2: " + asd2);
 
             if (asd1.equals(asd2))
             {
-                System.out.println("asd1 = asd2");
+//                System.out.println("Before shuffle");
+//                System.out.println(mData[i][0]);
+//                System.out.println(mData[i][1]);
+//                System.out.println(mData[i][2]);
+
                 Button answerButton1 = (Button) findViewById(R.id.answer_1);
                 answerButton1.setText(mData[i][0]);
                 answerButton1.setOnClickListener(new View.OnClickListener()
@@ -149,6 +149,15 @@ public class PopMenuActivity extends Activity
                         PopMenuActivity.super.onBackPressed();
                     }
                 });
+
+                //SHUFFLE ARRAY TO GET DIFFERENT ANSWER POSITIONS
+//                Randomize randomize = new Randomize(mData[i]);
+//                String[] temp = randomize.shuffleArray();
+
+//                System.out.println("After shuffle");
+//                System.out.println(temp[0]);
+//                System.out.println(temp[1]);
+//                System.out.println(temp[2]);
 
                 break mDataLengthLoop;
             } else
