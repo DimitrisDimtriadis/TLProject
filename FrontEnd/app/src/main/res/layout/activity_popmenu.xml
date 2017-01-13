@@ -11,44 +11,77 @@
               tools:context="com.example.johnywalker.adventure_go.frontEnd.LoginActivity">
 
 
-        <LinearLayout
-            android:id="@+id/pop_question"
+    <LinearLayout
+        android:id="@+id/pop_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/category_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:weightSum="1">
+            android:layout_weight="0.50"
+            android:gravity="center"
+            android:text="Category: Unknown"/>
 
-            <TextView
-                android:text="My question is ..."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_text"
-                android:layout_weight="0.50"/>
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:gravity="center"
+            android:text="Question: Unknown"/>
 
-            <Button
-                android:id="@+id/answer_1"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Answer 1"
-                android:textStyle="bold"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/answer_2"
-                style="?android:textAppearanceSmall"
+            <EditText
+                android:id="@+id/user_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Answer 2"
-                android:textStyle="bold"/>
-            <Button
-                android:id="@+id/answer_3"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Answer 3"
-                android:textStyle="bold"/>
-        </LinearLayout>
+                android:hint="@string/prompt_answer"
+                android:maxLines="1"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/action_answer"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/answer"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/show_hint"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/hint"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/hint_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="Hint: Unknown"/>
+
+
+        <Button
+            android:id="@+id/close_quest_window"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Close"
+            android:textStyle="bold"/>
+    </LinearLayout>
 </LinearLayout>
