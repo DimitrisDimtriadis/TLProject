@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.johnywalker.adventure_go.R;
+import com.example.johnywalker.adventure_go.miscellaneous.CompareStrings;
 import com.example.johnywalker.adventure_go.miscellaneous.GeofenceService;
 import com.example.johnywalker.adventure_go.miscellaneous.GlobalVariables;
 import com.example.johnywalker.adventure_go.miscellaneous.MySingleton;
@@ -44,11 +45,14 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 
 public class MapsActivity extends FragmentActivity
@@ -74,6 +78,8 @@ public class MapsActivity extends FragmentActivity
     TextView showLong, showLat, showScore;
     private Location mLastLocation;
     private GlobalVariables globalVariables = new GlobalVariables();
+    private ArrayList<Marker> markers = new ArrayList<>(20);
+    private CompareStrings compareStrings = new CompareStrings();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -144,14 +150,7 @@ public class MapsActivity extends FragmentActivity
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.ACCESS_FINE_LOCATION))
             {
-
-                // Show an expanation to the user *asynchronously* -- don't block
-                // this thread waiting for the user's response! After the user
-                // sees the explanation, try again to request the permission.
-                //  TODO: Prompt with explanation!
-
                 ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_LOCATION);
-
             } else
             {
                 ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_LOCATION);
@@ -172,15 +171,12 @@ public class MapsActivity extends FragmentActivity
             {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 {
-                    // permission was granted, yay!
                     if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
                     {
                         mMap.setMyLocationEnabled(true);
                     }
                 } else
                 {
-                    // permission denied, shit...
-                    // functionality that depends on this permission.
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
                 }
                 return;
@@ -194,7 +190,6 @@ public class MapsActivity extends FragmentActivity
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 17);
         mMap.animateCamera(cameraUpdate);
-//        Log.d(TAG, "Location update lat/lot: " + location.getLatitude() + " " + location.getLongitude());
     }
 
     @Override
@@ -203,6 +198,16 @@ public class MapsActivity extends FragmentActivity
         Log.d(TAG, "onResume called");
         super.onResume();
         int response = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
+
+        showScore.setText(String.format("%1$s", globalVariables.getUser().getScore()));
+
+        for (int i = 0; i < markers.size(); i++)
+        {
+            if (compareStrings.strictCompareStrings(markers.get(i).getTitle(), globalVariables.getLastQuestionAnswered()))
+            {
+                markers.get(i).remove();
+            }
+        }
 
         if (response != ConnectionResult.SUCCESS)
         {
@@ -368,8 +373,7 @@ public class MapsActivity extends FragmentActivity
                                         riddle.getString("difficulty"));
                                 String Question = riddles.getQuestion();
                                 LatLng Point = new LatLng(quest.getLatitude(), quest.getLongitude());
-                                mMap.addMarker(new MarkerOptions().position(Point).title(Question));
-
+                                markers.add(mMap.addMarker(new MarkerOptions().position(Point).title(Question)));
 
                                 Geofence geofence = new Geofence.Builder()
                                         .setRequestId(riddle.getString("question"))

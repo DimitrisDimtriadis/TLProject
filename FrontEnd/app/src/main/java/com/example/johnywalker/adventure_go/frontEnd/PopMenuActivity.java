@@ -1,20 +1,30 @@
 package com.example.johnywalker.adventure_go.frontEnd;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.johnywalker.adventure_go.R;
+import com.example.johnywalker.adventure_go.miscellaneous.CompareStrings;
 import com.example.johnywalker.adventure_go.miscellaneous.GlobalVariables;
 import com.example.johnywalker.adventure_go.miscellaneous.MySingleton;
 import com.example.johnywalker.adventure_go.miscellaneous.Randomize;
 import com.example.johnywalker.adventure_go.models.Riddle;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,8 +35,11 @@ import org.json.JSONObject;
  */
 public class PopMenuActivity extends Activity
 {
-    static String mData[][];
+    static Riddle mRiddles[];
+    CompareStrings compareStrings = new CompareStrings();
     GlobalVariables globalVariables = new GlobalVariables();
+
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,6 +57,8 @@ public class PopMenuActivity extends Activity
 
         retrieveDataFromJson();
         System.out.println(globalVariables.getReqID());
+
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     protected void retrieveDataFromJson()
@@ -55,7 +70,7 @@ public class PopMenuActivity extends Activity
                     @Override
                     public void onResponse(JSONArray response)
                     {
-                        mData = new String[response.length()][4];
+                        mRiddles = new Riddle[response.length()];
                         int count = 0;
                         while (count < response.length())
                         {
@@ -71,9 +86,8 @@ public class PopMenuActivity extends Activity
                                         riddle.getString("category"),
                                         riddle.getString("difficulty"));
 
-                                retrieveDataFromJson3(riddles.getQuestion(), riddles.getAnswer(), riddles.getCategory(), riddles.getHint(), count);
+                                mRiddles[count] = riddles;
                                 count++;
-
                             } catch (JSONException e)
                             {
                                 e.printStackTrace();
@@ -94,70 +108,70 @@ public class PopMenuActivity extends Activity
         MySingleton.getInstance(PopMenuActivity.this).addToRequestqueue(jsonArrayRequest);
     }
 
-    public void retrieveDataFromJson3(String questions, String answers, String categories, String hints, int count)
-    {
-        mData[count][0] = questions;
-        mData[count][1] = answers;
-        mData[count][2] = categories;
-        mData[count][3] = hints;
-    }
-
     public void retrieveDataFromJson4(String requestID)
     {
         String asd1, asd2;
+        int i;
 
         mDataLengthLoop:
-        for (int i = 0; i < mData.length; i++)
+        for (i = 0; i < mRiddles.length; i++)
         {
+            final Riddle riddle = mRiddles[i];
             asd1 = requestID;
-            asd2 = mData[i][0];
+            asd2 = riddle.getQuestion();
 
-            if (asd1.equals(asd2))
+            if (compareStrings.compareStrings(asd1, asd2))
             {
-//                System.out.println("Before shuffle");
-//                System.out.println(mData[i][0]);
-//                System.out.println(mData[i][1]);
-//                System.out.println(mData[i][2]);
 
-                Button answerButton1 = (Button) findViewById(R.id.answer_1);
-                answerButton1.setText(mData[i][0]);
-                answerButton1.setOnClickListener(new View.OnClickListener()
+                EditText answer = (EditText) findViewById(R.id.user_answer);
+
+                TextView categoryLabel = (TextView) findViewById(R.id.category_text);
+                categoryLabel.setText(riddle.getCategory());
+
+                TextView questionLabel = (TextView) findViewById(R.id.question_text);
+                questionLabel.setText(riddle.getQuestion());
+
+                answer.setOnEditorActionListener(new TextView.OnEditorActionListener()
+                {
+                    @Override
+                    public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent)
+                    {
+                        checkAnswer(riddle);
+                        return true;
+                    }
+                });
+
+                Button actionAnswer = (Button) findViewById(R.id.action_answer);
+                actionAnswer.setOnClickListener(new View.OnClickListener()
                 {
                     @Override
                     public void onClick(View view)
                     {
-                        PopMenuActivity.super.onBackPressed();
+                        checkAnswer(riddle);
                     }
                 });
-                Button answerButton2 = (Button) findViewById(R.id.answer_2);
-                answerButton2.setText(mData[i][1]);
-                answerButton2.setOnClickListener(new View.OnClickListener()
+
+                Button show_hint = (Button) findViewById(R.id.show_hint);
+                show_hint.setOnClickListener(new View.OnClickListener()
                 {
                     @Override
                     public void onClick(View view)
                     {
-                        PopMenuActivity.super.onBackPressed();
+                        TextView hint = (TextView) findViewById(R.id.hint_text);
+                        hint.setText(riddle.getHint());
+                        hint.setVisibility(View.VISIBLE);
                     }
                 });
-                Button answerButton3 = (Button) findViewById(R.id.answer_3);
-                answerButton3.setText(mData[i][2]);
-                answerButton3.setOnClickListener(new View.OnClickListener()
+
+                Button close = (Button) findViewById(R.id.close_quest_window);
+                close.setOnClickListener(new View.OnClickListener()
                 {
                     @Override
                     public void onClick(View view)
                     {
-                        PopMenuActivity.super.onBackPressed();
+                        finish();
                     }
                 });
-
-                //SHUFFLE ARRAY TO GET DIFFERENT ANSWER POSITIONS
-//                Randomize randomize = new Randomize(mData[i]);
-//                String[] temp = randomize.shuffleArray();
-
-//                System.out.println("After shuffle");
-//                System.out.println(temp[0]);
-//                System.out.println(temp[1]);
-//                System.out.println(temp[2]);
 
                 break mDataLengthLoop;
             } else
@@ -165,6 +179,55 @@ public class PopMenuActivity extends Activity
                 System.out.println("Compare error");
             }
         }
+    }
+
+    public void checkAnswer(Riddle riddle)
+    {
+        EditText answer = (EditText) findViewById(R.id.user_answer);
+        String user_answer = answer.getText().toString();
+
+        if (compareStrings.strictCompareStrings(user_answer, riddle.getAnswer()))
+        {
+            Toast.makeText(this, "Correct answer!!", Toast.LENGTH_SHORT);
+            globalVariables.getUser().setScore(globalVariables.getUser().getScore() + riddle.getPoints());
+            globalVariables.setLastQuestionAnswered(riddle.getQuestion());
+            finish();
+        }
+        else
+        {
+            Toast.makeText(this, "Wrong answer. Try again.", Toast.LENGTH_LONG);
+        }
+    }
+
+    public Action getIndexApiAction()
+    {
+        Thing object = new Thing.Builder()
+                .setName("PopMenu Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+
+        client.connect();
+        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    }
+
+    @Override
+    public void onStop()
+    {
+        super.onStop();
+
+        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        client.disconnect();
     }
 }
 

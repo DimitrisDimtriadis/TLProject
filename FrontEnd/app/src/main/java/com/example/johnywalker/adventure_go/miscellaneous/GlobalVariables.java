@@ -11,6 +11,7 @@ public class GlobalVariables
     public static String reqId;
     public static String url;
     public static User user;
+    public static String lastQuestionAnswered;
 
     public void setUrl(String url)
     {
@@ -41,5 +42,15 @@ public class GlobalVariables
     public User getUser()
     {
         return user;
+    }
+
+    public void setLastQuestionAnswered(String lastQuestionAnswered)
+    {
+        this.lastQuestionAnswered = lastQuestionAnswered;
+    }
+
+    public String getLastQuestionAnswered()
+    {
+        return lastQuestionAnswered;
     }
 }
