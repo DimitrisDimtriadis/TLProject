@@ -19,7 +19,6 @@ import com.example.johnywalker.adventure_go.R;
 import com.example.johnywalker.adventure_go.miscellaneous.CompareStrings;
 import com.example.johnywalker.adventure_go.miscellaneous.GlobalVariables;
 import com.example.johnywalker.adventure_go.miscellaneous.MySingleton;
-import com.example.johnywalker.adventure_go.miscellaneous.Randomize;
 import com.example.johnywalker.adventure_go.models.Riddle;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;

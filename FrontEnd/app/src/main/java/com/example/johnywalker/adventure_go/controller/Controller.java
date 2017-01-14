@@ -27,9 +27,9 @@ public class Controller implements IDao
         return register.attemptUserRegistration(username, email, password);
     }
 
-    public void userUpdate(User user)
+    public boolean userUpdate(User user)
     {
-        userUpdate = new UserUpdate(user);
-        userUpdate.update();
+        userUpdate = new UserUpdate();
+        return userUpdate.update(user);
     }
 }
