@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.tl2project.model.User;
 import org.tl2project.repository.UserRepository;
 
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -32,7 +33,7 @@ public class UserService {
           Long score = (long) 0;
           User user = new User(username, email, password, score);
           repository.save(user);
-          response = true;
+          response = true; 
 
         } else {
       
@@ -57,11 +58,7 @@ public class UserService {
       else{
           List<User> users = repository.findByUsernameAndPassword(username, password);
 
-<<<<<<< HEAD
           if (users.isEmpty()) { 
-=======
-          if (users.isEmpty()) {
->>>>>>> origin/TasosKobi
       
               response = false;
           }else 
@@ -78,7 +75,7 @@ public class UserService {
   }
   public Long getScore(String username, Long points){
     
-    Long score = (long) 0;
+    Long score =  (long) 0;
    
     
     User user = repository.findByUsername(username);
@@ -90,12 +87,28 @@ public class UserService {
     }
     return score;   
   }
-public User getUser(String username){
+  public User getUser(String username){
     
     User user = repository.findByUsername(username);
     
     return user;
   }
-  
+  public  List<User> getScores(){
+    
+    int i;
+    
+    
+    List<User> allUsers = repository.findAll();
+    allUsers.sort((u1, u2) -> u2.getScore().compareTo(u1.getScore()));
+      
+    for(i=0;i< allUsers.size();i++){
+      
+      allUsers.get(i).setPassword(null);
+      allUsers.get(i).setEmail(null);
+    }
+    
+    
+    return allUsers; 
+  }
 
 }
