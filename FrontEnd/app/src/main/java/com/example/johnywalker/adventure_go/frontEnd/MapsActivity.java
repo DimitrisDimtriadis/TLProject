@@ -26,6 +26,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.johnywalker.adventure_go.R;
+import com.example.johnywalker.adventure_go.controller.Controller;
 import com.example.johnywalker.adventure_go.miscellaneous.CompareStrings;
 import com.example.johnywalker.adventure_go.miscellaneous.GeofenceService;
 import com.example.johnywalker.adventure_go.miscellaneous.GlobalVariables;
@@ -82,6 +83,7 @@ public class MapsActivity extends FragmentActivity
     private GlobalVariables globalVariables = new GlobalVariables();
     private ArrayList<Marker> markers = new ArrayList<>(20);
     private CompareStrings compareStrings = new CompareStrings();
+    Controller controller = new Controller();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -212,7 +214,7 @@ public class MapsActivity extends FragmentActivity
         super.onResume();
         int response = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
 
-        showScore.setText(String.format("%1$s", globalVariables.getUser().getScore()));
+        updateScore();
 
         if (globalVariables.getLastQuestionAnswered()!=null) {
             for (int i = 0; i < markers.size(); i++) {
@@ -423,5 +425,12 @@ public class MapsActivity extends FragmentActivity
                 }
         );
         MySingleton.getInstance(MapsActivity.this).addToRequestqueue(jsonArrayRequest);
+    }
+
+    private void updateScore()
+    {
+        showScore.setText(String.format("%1$s", globalVariables.getUser().getScore()));
+
+        controller.userUpdate(globalVariables.getUser());
     }
 }

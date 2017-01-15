@@ -21,12 +21,12 @@ public class MockDatabase implements IDao
     {
         if(email.equals(mail))
         {
-            System.out.println("Error: email");
+//            System.out.println("Error: email");
             return false;
         }
         else if(username.equals(name))
         {
-            System.out.println("Error: username");
+//            System.out.println("Error: username");
             return false;
         }
         else

@@ -17,6 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class UserVerification
 {
     private GlobalVariables globalVariables = new GlobalVariables();
+    private RestTemplate restTemplate;
 
     public boolean attemptUserVerification(String username, String password)
     {
@@ -28,7 +29,7 @@ public class UserVerification
                     .queryParam("username", username)
                     .queryParam("password", password);
 
-            RestTemplate restTemplate = new RestTemplate();
+            restTemplate = new RestTemplate();
             ResponseEntity<User> userResponse = restTemplate.exchange(builder.build().encode().toUri(), HttpMethod.GET, null, new ParameterizedTypeReference<User>()
             {
             });

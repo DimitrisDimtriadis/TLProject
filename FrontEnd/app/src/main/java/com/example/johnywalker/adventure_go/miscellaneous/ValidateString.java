@@ -78,7 +78,7 @@ public class ValidateString
 		}
 	}
 	
-	public void printReturnValues()
+	/*public void printReturnValues()
 	{
 		System.out.println("Return values express the error in the string provided, if any");
 		System.out.println("--------------------------------------------------------------");
@@ -89,5 +89,5 @@ public class ValidateString
 		System.out.println("500 = STRING CONTAINS WHITESPACE");
 		System.out.println("600 = STRING CONTAINS SPECIAL CHARACTER(S)");
 		System.out.println("700 = STRING EMPTY");
-	}
+	}*/
 }
