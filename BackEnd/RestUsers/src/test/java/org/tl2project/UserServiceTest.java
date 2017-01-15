@@ -29,11 +29,10 @@ public class UserServiceTest {
     @Autowired
     UserService userService;
 	
-    List <User> users = new ArrayList<>();
+    List <User> users = new ArrayList<>(); 
     
     
 	@Test
-<<<<<<< HEAD
 	public void LoginTest() throws Exception{
 	  
 	  User user = new User("admin","admin","admin", (long) 0);
@@ -55,62 +54,24 @@ public class UserServiceTest {
         
         assertEquals(false, userService.
             checkLogin(user2.getUserName(),user2.getPassword()));
-=======
-	public void LoginTest() {
-		when(userService.checkLogin(username, password)).
-		thenReturn(true);
-		
-		assertEquals(true, userService.
-		    checkLogin(username ,password));
-	}
-	@Test
-	public void LoginFailureTest() {
-		when(userService.checkLogin(username,password)).
-		thenReturn(false);
-		assertEquals(false,userService.
-		    checkLogin(username ,password));
-<<<<<<< HEAD
->>>>>>> origin/TasosKobi
-=======
->>>>>>> 1e3cb8dd8a5b19f9d45ca000084202b3d009cf4f
 	}
 	
 	@Test
 	public void LoginVerificationAnyStringUsername() {
-<<<<<<< HEAD
-<<<<<<< HEAD
 		
 	  User user = new User("","admin","admin", (long) 0);
      
         assertEquals(false, userService.
             checkLogin(user.getUserName(),user.getPassword()));
-=======
-		userService.checkLogin(null, password);
-		verify(userService).checkLogin(anyString(),eq(password));	
->>>>>>> origin/TasosKobi
-=======
-		userService.checkLogin(null, password);
-		verify(userService).checkLogin(anyString(),eq(password));	
->>>>>>> 1e3cb8dd8a5b19f9d45ca000084202b3d009cf4f
 	}
 	
 	@Test
 	public void LoginVerificationAnyStringPassword() {
-<<<<<<< HEAD
-<<<<<<< HEAD
 	  
 	  User user = new User("admin","","admin", (long) 0);
 	     
       assertEquals(false, userService.
           checkLogin(user.getUserName(),user.getPassword()));
-=======
-		userService.checkLogin(username, null);
-		verify(userService).checkLogin(eq(username),anyString());		
->>>>>>> origin/TasosKobi
-=======
-		userService.checkLogin(username, null);
-		verify(userService).checkLogin(eq(username),anyString());		
->>>>>>> 1e3cb8dd8a5b19f9d45ca000084202b3d009cf4f
 	}
 	
 	@Test
