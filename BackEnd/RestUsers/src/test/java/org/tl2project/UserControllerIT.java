@@ -16,10 +16,10 @@ import com.jayway.restassured.RestAssured;
 
 
 
-public class UserControllerIT {   
+public class UserControllerIT {    
   
   @Before
-  public void setup (){
+  public void setup (){ 
     int port = 8090;
     RestAssured.baseURI = "http://localhost";
     RestAssured.port = port;
