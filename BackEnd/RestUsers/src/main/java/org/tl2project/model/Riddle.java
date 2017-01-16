@@ -104,24 +104,4 @@ public class Riddle implements Serializable{
     this.difficulty = difficulty;
   }
   
-  public String calculateDifficulty(Long score){
-    String difficulty = null;
-    
-    if(score < 20){
-      difficulty = "EASY";
-    }
-    else if(score>=20 && score < 50 ){
-        difficulty = "MEDIUM";
-    }
-    else if(score>=50 && score < 100 ){
-      difficulty = "HARD";
-    }
-    else if(score >= 100 ){
-      difficulty = "VERY HARD";
-    }
-    
-    
-    return difficulty;
-  }
-  
 }

@@ -1,9 +1,6 @@
 package org.tl2project.controller;
 
 
-
-import java.util.List;
-
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +18,7 @@ import org.tl2project.service.UserService;
 
 @RequestMapping("/user")
 @RestController
-public class UserController { 
+public class UserController {
 
   @Autowired
   UserService userservice;
@@ -76,16 +73,8 @@ public class UserController {
     return new ResponseEntity<String>(Long.toString(score), HttpStatus.OK);
     }
     
-    return new ResponseEntity<String>(Long.toString(score), HttpStatus.NOT_FOUND); 
+    return new ResponseEntity<String>(Long.toString(score), HttpStatus.NOT_FOUND);
   } 
-  
-  @RequestMapping(path="/getscores" ,method=RequestMethod.GET, produces="application/json")    
-  public @ResponseBody List<User> getScores() {
-      
-      
-    return userservice.getScores();  
-          
-  }
   
 
 

@@ -109,8 +109,6 @@ public class MapsActivity extends FragmentActivity
                 startActivity(viewIntent);
             }
         });
-
-
         googleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this, this)
                 .addApi(LocationServices.API)
@@ -228,7 +226,6 @@ public class MapsActivity extends FragmentActivity
                 {
                     markers.get(i).remove();
                 }
-
             }
         }
 
