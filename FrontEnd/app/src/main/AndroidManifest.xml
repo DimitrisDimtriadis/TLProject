@@ -8,6 +8,8 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -41,11 +43,6 @@
 
         <activity android:name=".frontEnd.PopMenuActivity"
             android:theme="@style/AppTheme.CustomTheme"></activity>
-
-        <activity android:name=".frontEnd.PopScoreboard"
-        android:theme="@style/AppTheme.CustomTheme"></activity>
-</application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    </application>
 
 </manifest>

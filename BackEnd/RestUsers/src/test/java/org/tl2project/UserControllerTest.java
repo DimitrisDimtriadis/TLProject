@@ -13,18 +13,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.tl2project.controller.UserController;
-import org.tl2project.model.User;
 import org.tl2project.service.UserService;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserControllerTest { 
+public class UserControllerTest {
   
   @Mock
   private UserService userService;
@@ -76,27 +72,6 @@ public class UserControllerTest {
     
     mockMvc.perform(get("/user/login?username=admin&password=admin"))
     .andExpect(status().isNotFound()); 
-  }
-  
- @Test 
- public void setScoreTest() throws Exception {
-    
-   Long p = (long) 5;
-    when(userService.getScore("admin",p)).thenReturn(p);
-    
-    mockMvc.perform(get("/user/score?username=admin&points=5"))
-    .andExpect(status().isOk());  
-    
-  }
- @Test
- public void getScoresTest() throws Exception {
-   
-   List<User> users = new ArrayList<>();
-    when(userService.getScores()).thenReturn(users);
-    
-    mockMvc.perform(get("/user/getscores"))
-    .andExpect(status().isOk());  
-    
   }
   
 }
