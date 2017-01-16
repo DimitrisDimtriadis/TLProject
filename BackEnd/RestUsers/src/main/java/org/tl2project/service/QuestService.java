@@ -7,7 +7,6 @@ import org.tl2project.repository.RiddleRepository;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,37 +21,80 @@ public class QuestService {
   
   public List<Quest> produceQuests(BigDecimal lat, BigDecimal lng,Long score){
     
-    int i=0, j=0;
-    
     List<List<BigDecimal>> points = new ArrayList<List<BigDecimal>>();
-    BigDecimal distance = new BigDecimal(0.001);
-    points.add(Arrays.asList(lat.subtract(distance),lng));  
-    points.add(Arrays.asList(lat.add(distance),lng)); 
-    points.add(Arrays.asList(lat,lng.subtract(distance)));
-    points.add(Arrays.asList(lat,lng.add(distance)));
     
-    Riddle riddle = new Riddle();
-    String difficulty = riddle.calculateDifficulty(score);
-    List<Riddle> riddles = repository.findByDifficulty(difficulty);
-    Collections.shuffle(riddles);
+    calculatePoints(lat, lng, points);
+    
+    String difficulty = calculateDifficulty(score);
     
     ArrayList<Quest> quests = new ArrayList<Quest>();
     
-    for(i=0;i< 4;i++){
-      Quest quest = new Quest();
-      quest.setRiddle(riddles.get(i));    
-      for(j=0;j< 2;j++){ 
-        if(j==0){
-          quest.setLatitude(points.get(i).get(j));
-       }else{
-          quest.setLongitude(points.get(i).get(j));     
-       }
-      }
-      quests.add(quest);
-    } 
+    assignPointsToQuests(quests, difficulty, points);
     
     return quests;  
   }
   
+  
+  public void calculatePoints(BigDecimal lat, BigDecimal lng, List<List<BigDecimal>> points){
+    
+    BigDecimal distance = new BigDecimal(0.001);
+      
+    
+<<<<<<< HEAD
+    points.add(Arrays.asList(lat.subtract(distance),lng)); 
+=======
+    points.add(Arrays.asList(lat.subtract(distance),lng));
+>>>>>>> origin/TasosKobi
+    
+    points.add(Arrays.asList(lat.add(distance),lng));
+    
+    points.add(Arrays.asList(lat,lng.subtract(distance)));
+  
+    points.add(Arrays.asList(lat,lng.add(distance)));
+      
+  }
+  
+  public void assignPointsToQuests( ArrayList<Quest> quests, String difficulty, List<List<BigDecimal>> points){
+        
+      int i=0, j=0;
+      List<Riddle> riddles = repository.findByDifficulty(difficulty);
+      
+      for(i=0;i< 4;i++){
+        
+        Quest quest = new Quest();
+        quest.setRiddle(riddles.get(i));    
+        for(j=0;j< 2;j++){
+          
+          if(j==0){
+            
+            quest.setLatitude(points.get(i).get(j));
+         }else{
+           
+            quest.setLongitude(points.get(i).get(j));     
+         }
+        }
+        quests.add(quest);
+      } 
+  }
+  
+  public String calculateDifficulty(Long score){
+    String difficulty = new String();
+    
+    if(score<20){
+      difficulty = "EASY";
+    }
+    else if(score>=20 && score < 50 ){
+        difficulty = "MEDIUM";
+    }
+    else if(score>=50 && score < 100 ){
+      difficulty = "HARD";
+    }
+    else if(score >= 100 ){
+      difficulty = "VERY HARD";
+    }
+    
+    
+    return difficulty;
+  }
 }
 
