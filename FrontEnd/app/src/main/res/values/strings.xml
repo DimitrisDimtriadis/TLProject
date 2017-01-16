@@ -20,4 +20,9 @@
 
     <string name="hint">Hint</string>
     <string name="answer">Check answer</string>
+    <string name="username_id">Username_ID</string>
+    <string name="user_score">User_Score</string>
+    <string name="global_top_score">Top score</string>
+    <string name="close">Close</string>
+    <string name="scoreboard">Scoreboard</string>
 </resources>

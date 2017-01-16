@@ -96,12 +96,16 @@ public class MapsActivity extends FragmentActivity
         showScore = (TextView) findViewById(R.id.scoreView);
         showScore.setText(globalVariables.getUser().getScore().toString());
 
-        Button butScore=(Button)findViewById(R.id.button_0);
-        butScore.setOnClickListener(new View.OnClickListener() {
+        Button butScore = (Button) findViewById(R.id.button_0);
+        butScore.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
+                controller.updateScoreboard();
+
                 Intent viewIntent = new Intent(MapsActivity.this, PopScoreboard.class);
-        viewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                viewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(viewIntent);
             }
         });
@@ -216,9 +220,12 @@ public class MapsActivity extends FragmentActivity
 
         updateScore();
 
-        if (globalVariables.getLastQuestionAnswered()!=null) {
-            for (int i = 0; i < markers.size(); i++) {
-                if (compareStrings.strictCompareStrings(markers.get(i).getTitle(), globalVariables.getLastQuestionAnswered())) {
+        if (globalVariables.getLastQuestionAnswered() != null)
+        {
+            for (int i = 0; i < markers.size(); i++)
+            {
+                if (compareStrings.strictCompareStrings(markers.get(i).getTitle(), globalVariables.getLastQuestionAnswered()))
+                {
                     markers.get(i).remove();
                 }
 

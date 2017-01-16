@@ -19,23 +19,40 @@
             android:id="@+id/username_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.10"
             android:gravity="center"
-            android:text="Username_ID"/>
+            android:text="@string/username_id"/>
         <TextView
             android:id="@+id/score_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.11"
             android:gravity="center"
-            android:text="User_Score"/>
+            android:text="@string/user_score"/>
+
         <TextView
-            android:id="@+id/topscores_text"
+            android:id="@+id/topScores_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.50"
+            android:layout_weight="0.13"
             android:gravity="center"
-            android:text="Global Top Score"/>
+            android:layout_marginTop="20dp"
+            android:text="@string/global_top_score"/>
+
+        <TextView
+            android:id="@+id/top_username_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"
+            android:gravity="center"
+            android:text="@string/username_id"/>
+        <TextView
+            android:id="@+id/top_score_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.11"
+            android:gravity="center"
+            android:text="@string/user_score"/>
 
 
         <Button
@@ -44,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Close"
+            android:text="@string/close"
             android:textStyle="bold"/>
     </LinearLayout>
 </LinearLayout>

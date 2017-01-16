@@ -12,6 +12,7 @@ public class Controller implements IDao
     private UserVerification login;
     private UserRegistration register;
     private UserUpdate userUpdate;
+    private TopScorePlayer topScorePlayer;
 
     @Override
     public boolean attemptUserVerification(String username, String password)
@@ -31,5 +32,11 @@ public class Controller implements IDao
     {
         userUpdate = new UserUpdate();
         return userUpdate.update(user);
+    }
+
+    public void updateScoreboard()
+    {
+        topScorePlayer = new TopScorePlayer();
+        topScorePlayer.getTopScorePlayer();
     }
 }
