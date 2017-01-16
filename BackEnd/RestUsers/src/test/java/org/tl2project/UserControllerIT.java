@@ -67,7 +67,7 @@ public class UserControllerIT {
       when().
       post("user/register").
       then().
-        statusCode(201);
+        statusCode(226);
   }
   
   @Test
