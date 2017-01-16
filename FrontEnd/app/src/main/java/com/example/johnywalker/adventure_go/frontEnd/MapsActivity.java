@@ -16,6 +16,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -94,6 +96,19 @@ public class MapsActivity extends FragmentActivity
         showScore = (TextView) findViewById(R.id.scoreView);
         showScore.setText(globalVariables.getUser().getScore().toString());
 
+        Button butScore = (Button) findViewById(R.id.button_0);
+        butScore.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                controller.updateScoreboard();
+
+                Intent viewIntent = new Intent(MapsActivity.this, PopScoreboard.class);
+                viewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(viewIntent);
+            }
+        });
         googleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this, this)
                 .addApi(LocationServices.API)
@@ -203,11 +218,14 @@ public class MapsActivity extends FragmentActivity
 
         updateScore();
 
-        for (int i = 0; i < markers.size(); i++)
+        if (globalVariables.getLastQuestionAnswered() != null)
         {
-            if (compareStrings.strictCompareStrings(markers.get(i).getTitle(), globalVariables.getLastQuestionAnswered()))
+            for (int i = 0; i < markers.size(); i++)
             {
-                markers.get(i).remove();
+                if (compareStrings.strictCompareStrings(markers.get(i).getTitle(), globalVariables.getLastQuestionAnswered()))
+                {
+                    markers.get(i).remove();
+                }
             }
         }
 

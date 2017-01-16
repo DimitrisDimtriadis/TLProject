@@ -38,6 +38,7 @@ public class UserVerification
 
             if(userResponse.getStatusCode() == HttpStatus.OK)
             {
+                globalVariables.getUser().setUsername(username);
                 return true;
             }
             else if(userResponse.getStatusCode() == HttpStatus.NOT_FOUND)

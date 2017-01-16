@@ -2,6 +2,8 @@ package com.example.johnywalker.adventure_go.miscellaneous;
 
 import com.example.johnywalker.adventure_go.models.User;
 
+import java.util.List;
+
 /**
  * Created by Dimitriadis983 on 06-Jan-17.
  */

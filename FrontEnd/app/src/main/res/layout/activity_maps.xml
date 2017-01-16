@@ -17,7 +17,7 @@ android:orientation="vertical" >
             android:layout_marginLeft="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next Target"
+            android:text="@string/scoreboard"
             android:id="@+id/button_0" />
         <TextView
             android:layout_marginLeft="20dp"
